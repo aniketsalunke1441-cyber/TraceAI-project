@@ -10,6 +10,7 @@ import Browse from './pages/Browse'
 import ItemDetails from './pages/ItemDetails'
 import MyReports from './pages/MyReports'
 import Claims from './pages/Claims'
+import Profile from './pages/Profile'
 
 function ScrollToTop() {
   const { pathname } = useLocation()
@@ -49,6 +50,7 @@ export default function App() {
           <Route path="/items/:id/edit" element={protect(<EditReport />)} />
           <Route path="/my-reports" element={protect(<MyReports />)} />
           <Route path="/claims" element={protect(<Claims />)} />
+          <Route path="/profile" element={protect(<Profile />)} />
           <Route path="*" element={<NotFound />} />
         </Route>
       </Routes>

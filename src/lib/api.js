@@ -20,7 +20,7 @@ import { buildDemoItems, buildDemoClaims, DEMO_USERS } from './demoData'
 import { findMatchesFor } from './matching'
 import { hashPassword, makeSalt, safeEqual } from './password'
 import { blobToDataUrl } from './images'
-import { shortName } from './utils'
+import { resolveDisplayName, shortName } from './utils'
 
 export const activeBackend = isFirebaseConfigured
   ? 'firebase'
@@ -138,7 +138,7 @@ function demoDb() {
 
 const uid = (prefix) => `${prefix}-${Date.now().toString(36)}-${Math.random().toString(36).slice(2, 9)}`
 const wait = (ms = 120) => new Promise((r) => setTimeout(r, ms)) // feels like a real network call
-const publicUser = (u) => (u ? { id: u.id, email: u.email, name: u.name } : null)
+const publicUser = (u) => (u ? { id: u.id, email: u.email, name: resolveDisplayName(u.name, u.email) } : null)
 
 export function resetDemoData() {
   Object.values(KEYS).forEach((k) => {
@@ -213,7 +213,8 @@ export async function checkConnection() {
 /* ------------------------------------------------------------------ */
 function mapSupabaseUser(u) {
   if (!u) return null
-  return { id: u.id, email: u.email, name: u.user_metadata?.full_name || u.email.split('@')[0] }
+  const rawName = u.user_metadata?.full_name || u.user_metadata?.name || u.user_metadata?.display_name
+  return { id: u.id, email: u.email || '', name: resolveDisplayName(rawName, u.email) }
 }
 
 export async function getCurrentUser() {
@@ -278,6 +279,32 @@ export async function signIn({ email, password }) {
     return fbApi.firebaseSignIn({ email, password })
   }
   const { data, error } = await supabase.auth.signInWithPassword({ email, password })
+  if (error) throw appError(error)
+  return mapSupabaseUser(data.user)
+}
+
+export async function updateUserProfile({ name }) {
+  const trimmed = (name || '').trim()
+  if (!trimmed) throw new Error('Please enter a valid name.')
+
+  if (isDemoMode) {
+    const session = load(KEYS.session, () => null)
+    if (!session) throw new Error('Not logged in.')
+    const { users } = demoDb()
+    const idx = users.findIndex((u) => u.id === session.userId)
+    if (idx === -1) throw new Error('User not found.')
+    users[idx] = { ...users[idx], name: trimmed }
+    save(KEYS.users, users)
+    return publicUser(users[idx])
+  }
+
+  if (activeBackend === 'firebase') {
+    return fbApi.updateFirebaseUserProfile({ name: trimmed })
+  }
+
+  const { data, error } = await supabase.auth.updateUser({
+    data: { full_name: trimmed },
+  })
   if (error) throw appError(error)
   return mapSupabaseUser(data.user)
 }

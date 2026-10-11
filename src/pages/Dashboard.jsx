@@ -50,7 +50,7 @@ export default function Dashboard() {
 
   const { mine, matches, claims, recent } = data
   const pendingIncoming = claims.incoming.filter((c) => c.status === 'pending').length
-  const firstName = user.name.split(' ')[0]
+  const firstName = (user?.name || '').trim().split(' ')[0] || 'there'
 
   return (
     <div className="container-page py-8 sm:py-10">

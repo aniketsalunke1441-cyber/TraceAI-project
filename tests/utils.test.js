@@ -1,7 +1,7 @@
 // Unit tests for search / filter / helper functions. Run with:  npm test
 import { test } from 'node:test'
 import assert from 'node:assert/strict'
-import { filterItems, shortName, initials } from '../src/lib/utils.js'
+import { filterItems, shortName, initials, resolveDisplayName, firstInitial } from '../src/lib/utils.js'
 
 const items = [
   { id: 1, type: 'lost', status: 'open', category: 'Wallets & Purses', title: 'Brown leather wallet', description: 'cash and ID', location: 'Canteen', created_at: '2026-10-01T10:00:00Z' },
@@ -29,4 +29,13 @@ test('privacy helper shortens full names', () => {
   assert.equal(shortName('Priya Sharma'), 'Priya S.')
   assert.equal(shortName('Neha'), 'Neha')
   assert.equal(initials('Arjun Mehta'), 'AM')
+})
+
+test('user display name and first initial resolution', () => {
+  assert.equal(resolveDisplayName('Bharat Prajapat', 'bharat@college.edu'), 'Bharat Prajapat')
+  assert.equal(firstInitial('Bharat Prajapat', 'bharat@college.edu'), 'B')
+  assert.equal(resolveDisplayName('', 'bharat@college.edu'), 'bharat')
+  assert.equal(firstInitial('', 'bharat@college.edu'), 'B')
+  assert.equal(resolveDisplayName('', ''), 'User')
+  assert.equal(firstInitial('', ''), 'U')
 })

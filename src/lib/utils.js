@@ -38,6 +38,22 @@ export function daysAgoISO(n) {
   return d.toISOString().slice(0, 10)
 }
 
+export function resolveDisplayName(name = '', email = '') {
+  const clean = (name || '').trim()
+  if (clean) return clean
+  if (email && typeof email === 'string' && email.includes('@')) {
+    const localPart = email.split('@')[0].trim()
+    if (localPart) return localPart
+  }
+  return 'User'
+}
+
+export function firstInitial(name = '', email = '') {
+  const displayName = resolveDisplayName(name, email)
+  const trimmed = displayName.trim()
+  return (trimmed[0] || 'U').toUpperCase()
+}
+
 export function initials(name = '') {
   return name
     .split(' ')

@@ -35,8 +35,31 @@ export function AuthProvider({ children }) {
     setUser(null)
   }, [])
 
+  const updateProfile = useCallback(async ({ name }) => {
+    const updated = await api.updateUserProfile({ name })
+    setUser(updated)
+    return updated
+  }, [])
+
+  const refreshUser = useCallback(async () => {
+    const u = await api.getCurrentUser().catch(() => null)
+    setUser(u)
+    return u
+  }, [])
+
   return (
-    <AuthContext.Provider value={{ user, loading, signIn, signUp, signOut, isDemo: api.isDemoMode }}>
+    <AuthContext.Provider
+      value={{
+        user,
+        loading,
+        signIn,
+        signUp,
+        signOut,
+        updateProfile,
+        refreshUser,
+        isDemo: api.isDemoMode,
+      }}
+    >
       {children}
     </AuthContext.Provider>
   )

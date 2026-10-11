@@ -80,5 +80,13 @@ service cloud.firestore {
       allow create: if isAuthenticated();
       allow update, delete: if isAuthenticated() && resource.data.user_id == request.auth.uid;
     }
+
+    // USERS (User profile documents)
+    // - Authenticated users can read profile documents for display in reports/claims.
+    // - Users can write only their own user profile document.
+    match /users/{userId} {
+      allow read: if isAuthenticated();
+      allow write: if isAuthenticated() && request.auth.uid == userId;
+    }
   }
 }

@@ -188,7 +188,7 @@ export function Signup() {
         <div className="rounded-xl border border-emerald-200 bg-emerald-50 p-4 text-sm text-emerald-800">{info}</div>
       ) : (
         <form onSubmit={handleSubmit} className="space-y-4" noValidate>
-          {field('name', 'Full name', 'text', 'e.g. Harsh Varsani', 'name')}
+          {field('name', 'Full name', 'text', 'e.g. Bharat Prajapat', 'name')}
           {field('email', 'Email', 'email', 'you@college.edu', 'email')}
           {field('password', 'Password', 'password', 'At least 6 characters', 'new-password')}
           {field('confirm', 'Confirm password', 'password', 'Repeat password', 'new-password')}

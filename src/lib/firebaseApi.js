@@ -45,7 +45,7 @@ import {
   deleteObject,
 } from 'firebase/storage'
 import { findMatchesFor } from './matching'
-import { shortName } from './utils'
+import { resolveDisplayName, shortName } from './utils'
 
 const MATCH_NOTIFY_SCORE = 60
 const MATCHES_TO_STORE = 20
@@ -77,12 +77,27 @@ export function formatFirebaseError(err, fallback = 'Something went wrong. Pleas
   return errorObj
 }
 
-export function mapFirebaseUser(u) {
+export async function getFirebaseUserProfile(uid) {
+  if (!db || !uid) return null
+  try {
+    const userDoc = await getDoc(doc(db, 'users', uid))
+    if (userDoc.exists()) {
+      return userDoc.data()
+    }
+  } catch (err) {
+    console.warn('Could not read user profile from Firestore:', err?.message)
+  }
+  return null
+}
+
+export function mapFirebaseUser(u, profileData = null) {
   if (!u) return null
+  const profileName = profileData?.name || profileData?.displayName || profileData?.full_name
+  const name = resolveDisplayName(u.displayName || profileName, u.email)
   return {
     id: u.uid,
     email: u.email || '',
-    name: u.displayName || (u.email ? u.email.split('@')[0] : 'User'),
+    name,
   }
 }
 
@@ -107,32 +122,59 @@ export async function checkFirebaseConnection() {
 /* ------------------------------------------------------------------ */
 export async function getCurrentFirebaseUser() {
   if (!auth) return null
-  if (auth.currentUser) return mapFirebaseUser(auth.currentUser)
-  return new Promise((resolve) => {
-    const unsubscribe = onAuthStateChanged(
-      auth,
-      (user) => {
-        unsubscribe()
-        resolve(mapFirebaseUser(user))
-      },
-      () => resolve(null)
-    )
-  })
+  let fbUser = auth.currentUser
+  if (!fbUser) {
+    fbUser = await new Promise((resolve) => {
+      const unsubscribe = onAuthStateChanged(
+        auth,
+        (user) => {
+          unsubscribe()
+          resolve(user)
+        },
+        () => resolve(null)
+      )
+    })
+  }
+  if (!fbUser) return null
+  let profile = null
+  if (!fbUser.displayName) {
+    profile = await getFirebaseUserProfile(fbUser.uid).catch(() => null)
+  }
+  return mapFirebaseUser(fbUser, profile)
 }
 
 export function onFirebaseAuthStateChange(callback) {
   if (!auth) return () => {}
-  return onAuthStateChanged(auth, (user) => callback(mapFirebaseUser(user)))
+  return onAuthStateChanged(auth, async (user) => {
+    if (!user) {
+      callback(null)
+      return
+    }
+    let profile = null
+    if (!user.displayName) {
+      profile = await getFirebaseUserProfile(user.uid).catch(() => null)
+    }
+    callback(mapFirebaseUser(user, profile))
+  })
 }
 
 export async function firebaseSignUp({ name, email, password }) {
   email = email.trim().toLowerCase()
+  const trimmedName = (name || '').trim()
   try {
     const cred = await createUserWithEmailAndPassword(auth, email, password)
-    if (name && name.trim()) {
-      await updateProfile(cred.user, { displayName: name.trim() }).catch(() => {})
+    if (trimmedName) {
+      await updateProfile(cred.user, { displayName: trimmedName }).catch(() => {})
     }
-    return { user: mapFirebaseUser(cred.user), needsConfirmation: false }
+    if (db) {
+      await setDoc(doc(db, 'users', cred.user.uid), {
+        name: trimmedName || (email.split('@')[0] || 'User'),
+        email,
+        created_at: new Date().toISOString(),
+        updated_at: new Date().toISOString(),
+      }, { merge: true }).catch(() => {})
+    }
+    return { user: mapFirebaseUser(cred.user, { name: trimmedName }), needsConfirmation: false }
   } catch (err) {
     throw formatFirebaseError(err)
   }
@@ -142,9 +184,33 @@ export async function firebaseSignIn({ email, password }) {
   email = email.trim().toLowerCase()
   try {
     const cred = await signInWithEmailAndPassword(auth, email, password)
-    return mapFirebaseUser(cred.user)
+    let profile = null
+    if (!cred.user.displayName) {
+      profile = await getFirebaseUserProfile(cred.user.uid).catch(() => null)
+    }
+    return mapFirebaseUser(cred.user, profile)
   } catch (err) {
     throw formatFirebaseError(err)
+  }
+}
+
+export async function updateFirebaseUserProfile({ name }) {
+  if (!auth?.currentUser) throw new Error('Not logged in.')
+  const trimmedName = (name || '').trim()
+  try {
+    if (trimmedName) {
+      await updateProfile(auth.currentUser, { displayName: trimmedName })
+    }
+    if (db) {
+      await setDoc(doc(db, 'users', auth.currentUser.uid), {
+        name: trimmedName,
+        email: auth.currentUser.email || '',
+        updated_at: new Date().toISOString(),
+      }, { merge: true }).catch(() => {})
+    }
+    return mapFirebaseUser(auth.currentUser, { name: trimmedName })
+  } catch (err) {
+    throw formatFirebaseError(err, 'Failed to update user profile.')
   }
 }
 
