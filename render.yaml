@@ -1,7 +1,27 @@
 services:
-  # 1. Frontend Web App (Static Site)
-  - type: static
+  # 1. Python FastAPI Matching Service (Web Service)
+  - type: web
+    name: findback-matching-api
+    runtime: python
+    rootDir: backend
+    plan: free
+    healthCheckPath: /api/health
+    buildCommand: pip install -r requirements.txt
+    startCommand: uvicorn app.main:app --host 0.0.0.0 --port $PORT
+    envVars:
+      - key: PYTHON_VERSION
+        value: 3.11.9
+      - key: SUPABASE_URL
+        sync: false
+      - key: SUPABASE_PUBLISHABLE_KEY
+        sync: false
+      - key: CORS_ORIGINS
+        value: "*"
+
+  # 2. Frontend Web App (Static Site)
+  - type: web
     name: findback-frontend
+    runtime: static
     buildCommand: npm install && npm run build
     staticPublishPath: dist
     routes:
@@ -18,20 +38,3 @@ services:
           type: web
           name: findback-matching-api
           property: host
-
-  # 2. Python FastAPI Matching Service (Web Service)
-  - type: web
-    name: findback-matching-api
-    runtime: python
-    rootDir: backend
-    buildCommand: pip install -r requirements.txt
-    startCommand: uvicorn app.main:app --host 0.0.0.0 --port $PORT
-    envVars:
-      - key: PYTHON_VERSION
-        value: 3.11.9
-      - key: SUPABASE_URL
-        sync: false
-      - key: SUPABASE_PUBLISHABLE_KEY
-        sync: false
-      - key: CORS_ORIGINS
-        value: "*"
