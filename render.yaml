@@ -1,9 +1,8 @@
 services:
   # 1. Frontend Web App (Static Site)
-  - type: web
+  - type: static
     name: findback-frontend
-    runtime: static
-    buildCommand: npm run build
+    buildCommand: npm install && npm run build
     staticPublishPath: dist
     routes:
       - type: rewrite

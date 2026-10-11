@@ -554,7 +554,11 @@ const toPayload = (m) => ({ item_id: m.item.id, score: m.score, reasons: m.reaso
 /* ---------------- Optional Python matching service (backend/) ---------------- */
 // Set VITE_MATCHING_API_URL (e.g. http://localhost:8000) to let the FastAPI service compute
 // matches. If it is not set or not reachable, the identical in-browser engine is used.
-const MATCHING_API_URL = (import.meta.env.VITE_MATCHING_API_URL || '').trim().replace(/\/+$/, '')
+const rawMatchingUrl = (import.meta.env.VITE_MATCHING_API_URL || '').trim().replace(/\/+$/, '')
+const MATCHING_API_URL =
+  rawMatchingUrl && !rawMatchingUrl.startsWith('http://') && !rawMatchingUrl.startsWith('https://')
+    ? `https://${rawMatchingUrl}`
+    : rawMatchingUrl
 let lastMatchEngine = 'browser'
 
 /** Which engine produced the most recent matches: 'python' | 'browser' | 'browser-fallback'. */
