@@ -1,0 +1,45 @@
+{
+  "name": "findback",
+  "private": true,
+  "version": "1.0.0",
+  "description": "FindBack - AI-assisted Lost & Found platform for campuses",
+  "type": "module",
+  "scripts": {
+    "dev": "vite",
+    "build": "vite build",
+    "preview": "vite preview",
+    "test": "node --test tests/matching.test.js tests/utils.test.js tests/security.test.js tests/parity.test.js tests/setup.test.js",
+    "check:db": "node scripts/check-supabase.mjs",
+    "check:firebase": "node scripts/check-firebase.mjs",
+    "gen:parity": "node scripts/generate-parity-fixtures.mjs",
+    "test:api": "cd backend && (../.venv/bin/pytest 2>/dev/null || python3 -m pytest)",
+    "api": "cd backend && (../.venv/bin/uvicorn app.main:app --reload --port 8000 2>/dev/null || python3 -m uvicorn app.main:app --reload --port 8000)",
+    "setup:supabase": "bash scripts/setup-supabase.sh",
+    "seed": "node scripts/seed-demo-data.mjs",
+    "seed:firebase": "node scripts/seed-firebase-data.mjs",
+
+
+    "supabase": "supabase"
+  },
+  "dependencies": {
+    "@supabase/supabase-js": "^2.50.0",
+    "firebase": "^13.0.0",
+    "react": "^19.1.0",
+    "react-dom": "^19.1.0",
+    "react-router-dom": "^7.6.0"
+  },
+  "devDependencies": {
+    "@tailwindcss/vite": "^4.1.0",
+    "@vitejs/plugin-react": "^4.5.0",
+    "supabase": "^2.0.0",
+    "tailwindcss": "^4.1.0",
+    "vite": "^6.3.5"
+  },
+  "overrides": {
+    "@grpc/grpc-js": "^1.14.6"
+  },
+  "engines": {
+
+    "node": ">=20"
+  }
+}

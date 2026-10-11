@@ -1,0 +1,6248 @@
+{
+  "generated_by": "scripts/generate-parity-fixtures.mjs from src/lib/matching.js",
+  "items": [
+    {
+      "status": "open",
+      "description": "Lost my black iPhone 13 in a blue silicone case. Lock screen wallpaper is a mountain photo. Small crack at the bottom left corner.",
+      "color": "Black",
+      "brand": "Apple",
+      "location": "Central Library, 2nd floor reading area",
+      "id": "L1",
+      "type": "lost",
+      "user_id": "u1",
+      "title": "Black iPhone 13 with blue silicone case",
+      "category": "Electronics",
+      "date": "2026-10-06"
+    },
+    {
+      "status": "open",
+      "description": "Brown leather bi-fold wallet with my college ID, a metro card and some cash. Initials \"AM\" on the inside.",
+      "color": "Brown",
+      "brand": "Woodland",
+      "location": "Main canteen",
+      "id": "L2",
+      "type": "lost",
+      "user_id": "u3",
+      "title": "Brown leather wallet",
+      "category": "Wallets & Purses",
+      "date": "2026-10-04"
+    },
+    {
+      "status": "open",
+      "description": "Blue backpack with two notebooks, a pencil pouch and a black umbrella. Has a small keychain of a panda.",
+      "color": "Blue",
+      "brand": "Jansport",
+      "location": "Bus stop near main gate",
+      "id": "L3",
+      "type": "lost",
+      "user_id": "u4",
+      "title": "Blue Jansport backpack",
+      "category": "Bags",
+      "date": "2026-10-07"
+    },
+    {
+      "status": "open",
+      "description": "Black 65W HP laptop charger with round pin. Name tag \"Arjun\" stuck on the brick.",
+      "color": "Black",
+      "brand": "HP",
+      "location": "Computer Lab 204",
+      "id": "L4",
+      "type": "lost",
+      "user_id": "u3",
+      "title": "HP laptop charger",
+      "category": "Electronics",
+      "date": "2026-10-02"
+    },
+    {
+      "status": "open",
+      "description": "College ID card in a red lanyard.",
+      "color": "Red",
+      "brand": "",
+      "location": "Sports complex",
+      "id": "L5",
+      "type": "lost",
+      "user_id": "u2",
+      "title": "Student ID card",
+      "category": "ID & Cards",
+      "date": "2026-10-08"
+    },
+    {
+      "status": "open",
+      "description": "White AirPods Pro charging case with both earbuds inside. Has a small scratch on the lid.",
+      "color": "White",
+      "brand": "Apple",
+      "location": "Main Auditorium",
+      "id": "L6",
+      "type": "lost",
+      "user_id": "u1",
+      "title": "White AirPods Pro case",
+      "category": "Electronics",
+      "date": "2026-09-30"
+    },
+    {
+      "status": "open",
+      "description": "fx-991EX, scientific; name scratched on back…",
+      "color": "Silver",
+      "brand": " casio ",
+      "location": "Physics Lab",
+      "id": "L7",
+      "type": "lost",
+      "user_id": "u5",
+      "title": "Grey Casio calculator!!",
+      "category": "Books & Stationery",
+      "date": "2026-10-01"
+    },
+    {
+      "status": "open",
+      "description": "",
+      "color": "",
+      "brand": "",
+      "location": "",
+      "id": "L8",
+      "type": "lost",
+      "user_id": "u6",
+      "title": "Keys",
+      "category": "Keys",
+      "date": null
+    },
+    {
+      "status": "open",
+      "description": "Navy blue rucksack, laptop sleeve inside",
+      "color": "Navy",
+      "brand": "",
+      "location": "Main gate bus stop",
+      "id": "L9",
+      "type": "lost",
+      "user_id": "u7",
+      "title": "Navy rucksack",
+      "category": "Bags",
+      "date": "2026-10-09"
+    },
+    {
+      "status": "open",
+      "description": "Folding umbrella, rainbow pattern",
+      "color": "Multicolor",
+      "brand": "",
+      "location": "Library entrance",
+      "id": "L10",
+      "type": "lost",
+      "user_id": "u8",
+      "title": "Multicolour umbrella",
+      "category": "Accessories",
+      "date": "2026-10-01"
+    },
+    {
+      "status": "open",
+      "description": "Found a black iPhone with a blue cover under a desk on the second floor of the library. Screen has a small crack.",
+      "color": "Black",
+      "brand": "Apple",
+      "location": "Central Library, 2nd floor",
+      "id": "F1",
+      "type": "found",
+      "user_id": "u2",
+      "title": "Black Apple smartphone in blue case",
+      "category": "Electronics",
+      "date": "2026-10-07"
+    },
+    {
+      "status": "open",
+      "description": "Brown wallet found near the canteen counter. Contains a metro card and an ID.",
+      "color": "Brown",
+      "brand": "",
+      "location": "Canteen counter",
+      "id": "F2",
+      "type": "found",
+      "user_id": "u4",
+      "title": "Leather wallet with metro card",
+      "category": "Wallets & Purses",
+      "date": "2026-10-05"
+    },
+    {
+      "status": "open",
+      "description": "Three keys on a red rubber keychain, one looks like a bike key.",
+      "color": "Red",
+      "brand": "",
+      "location": "Parking lot B",
+      "id": "F3",
+      "type": "found",
+      "user_id": "u3",
+      "title": "Set of keys with red keychain",
+      "category": "Keys",
+      "date": "2026-10-08"
+    },
+    {
+      "status": "open",
+      "description": "White earbuds charging case found on a seat in row F of the auditorium after the seminar.",
+      "color": "White",
+      "brand": "",
+      "location": "Auditorium, row F",
+      "id": "F4",
+      "type": "found",
+      "user_id": "u4",
+      "title": "White wireless earbuds case",
+      "category": "Electronics",
+      "date": "2026-10-01"
+    },
+    {
+      "status": "open",
+      "description": "Blue Milton steel bottle with stickers, left on the bench in the gym.",
+      "color": "Blue",
+      "brand": "Milton",
+      "location": "Gym, ground floor",
+      "id": "F5",
+      "type": "found",
+      "user_id": "u2",
+      "title": "Blue steel water bottle",
+      "category": "Water Bottles",
+      "date": "2026-10-06"
+    },
+    {
+      "status": "open",
+      "description": "Navy backpack found on the bench at the main gate bus stop. Contains notebooks, a pencil pouch and an umbrella.",
+      "color": "Blue",
+      "brand": "",
+      "location": "Main gate bus stop",
+      "id": "F6",
+      "type": "found",
+      "user_id": "u3",
+      "title": "Navy blue backpack with notebooks",
+      "category": "Bags",
+      "date": "2026-10-08"
+    },
+    {
+      "status": "open",
+      "description": "Grey Casio fx-991EX calculator left in the lab after the practical exam.",
+      "color": "Gray",
+      "brand": "Casio",
+      "location": "Physics Lab 101",
+      "id": "F7",
+      "type": "found",
+      "user_id": "u2",
+      "title": "Casio scientific calculator",
+      "category": "Books & Stationery",
+      "date": "2026-10-03"
+    },
+    {
+      "status": "open",
+      "description": "Grey zip hoodie, size M, left on a chair in the seminar hall.",
+      "color": "Gray",
+      "brand": "",
+      "location": "Seminar Hall 3",
+      "id": "F8",
+      "type": "found",
+      "user_id": "u1",
+      "title": "Grey hoodie",
+      "category": "Clothing",
+      "date": "2026-10-07"
+    },
+    {
+      "status": "open",
+      "description": "Old black phone",
+      "color": "Black",
+      "brand": "Apple",
+      "location": "Library",
+      "id": "F9",
+      "type": "found",
+      "user_id": "u9",
+      "title": "Phone found weeks before",
+      "category": "Electronics",
+      "date": "2026-09-01"
+    },
+    {
+      "status": "open",
+      "description": "keys",
+      "color": "Silver",
+      "brand": "",
+      "location": "Gate",
+      "id": "F10",
+      "type": "found",
+      "user_id": "u9",
+      "title": "Keys found",
+      "category": "Keys",
+      "date": "2026-11-15"
+    },
+    {
+      "status": "resolved",
+      "description": "Black folding umbrella",
+      "color": "Black",
+      "brand": "",
+      "location": "Library entrance stand",
+      "id": "F11",
+      "type": "found",
+      "user_id": "u8",
+      "title": "Umbrella",
+      "category": "Accessories",
+      "date": "2026-10-01"
+    },
+    {
+      "status": "open",
+      "description": "Black iPhone blue case",
+      "color": "Black",
+      "brand": "Apple",
+      "location": "Central Library",
+      "id": "F12",
+      "type": "found",
+      "user_id": "u1",
+      "title": "Black iPhone (same owner as L1)",
+      "category": "Electronics",
+      "date": "2026-10-06"
+    }
+  ],
+  "tokenize": [
+    {
+      "text": "",
+      "tokens": []
+    },
+    {
+      "text": "Lost my iPhone and a Mobile near the Cafeteria!",
+      "tokens": [
+        "phone",
+        "phone",
+        "canteen"
+      ]
+    },
+    {
+      "text": "Keys, keychain & key-fob (red)",
+      "tokens": [
+        "key",
+        "key",
+        "key",
+        "key",
+        "red"
+      ]
+    },
+    {
+      "text": "The   batteries   are in the laboratories",
+      "tokens": [
+        "battery",
+        "lab"
+      ]
+    },
+    {
+      "text": "Wallet’s “cash”—and IDs",
+      "tokens": [
+        "wallet",
+        "cash",
+        "ids"
+      ]
+    },
+    {
+      "text": "glasses classes boxes buses",
+      "tokens": [
+        "glasses",
+        "classe",
+        "box",
+        "buse"
+      ]
+    },
+    {
+      "text": "ﾠunicode spaces\ttabs\nnewlines",
+      "tokens": [
+        "unicode",
+        "spac",
+        "tab",
+        "newlin"
+      ]
+    }
+  ],
+  "pairs": [
+    {
+      "a": "L1",
+      "b": "F1",
+      "score": 99,
+      "reasons": [
+        "Similar description: black, phone, blue, cover",
+        "Same category: Electronics",
+        "Same colour (Black)",
+        "Same brand: Apple",
+        "Nearby location: central, library, 2nd, floor",
+        "Found 1 day after it was lost"
+      ],
+      "breakdown": [
+        {
+          "key": "text",
+          "label": "Description",
+          "weight": 0.35,
+          "value": 72
+        },
+        {
+          "key": "category",
+          "label": "Category",
+          "weight": 0.2,
+          "value": 100
+        },
+        {
+          "key": "location",
+          "label": "Location",
+          "weight": 0.15,
+          "value": 100
+        },
+        {
+          "key": "date",
+          "label": "Date",
+          "weight": 0.13,
+          "value": 97
+        },
+        {
+          "key": "color",
+          "label": "Colour",
+          "weight": 0.12,
+          "value": 100
+        },
+        {
+          "key": "brand",
+          "label": "Brand",
+          "weight": 0.05,
+          "value": 100
+        }
+      ],
+      "reverse_score": 99
+    },
+    {
+      "a": "L1",
+      "b": "F2",
+      "score": 15,
+      "reasons": [
+        "Lost and found on the same day"
+      ],
+      "breakdown": [
+        {
+          "key": "text",
+          "label": "Description",
+          "weight": 0.35,
+          "value": 0
+        },
+        {
+          "key": "category",
+          "label": "Category",
+          "weight": 0.2,
+          "value": 0
+        },
+        {
+          "key": "location",
+          "label": "Location",
+          "weight": 0.15,
+          "value": 0
+        },
+        {
+          "key": "date",
+          "label": "Date",
+          "weight": 0.13,
+          "value": 100
+        },
+        {
+          "key": "color",
+          "label": "Colour",
+          "weight": 0.12,
+          "value": 0
+        },
+        {
+          "key": "brand",
+          "label": "Brand",
+          "weight": 0.05,
+          "value": 0
+        }
+      ],
+      "reverse_score": 15
+    },
+    {
+      "a": "L1",
+      "b": "F3",
+      "score": 14,
+      "reasons": [
+        "Found 2 days after it was lost"
+      ],
+      "breakdown": [
+        {
+          "key": "text",
+          "label": "Description",
+          "weight": 0.35,
+          "value": 0
+        },
+        {
+          "key": "category",
+          "label": "Category",
+          "weight": 0.2,
+          "value": 0
+        },
+        {
+          "key": "location",
+          "label": "Location",
+          "weight": 0.15,
+          "value": 0
+        },
+        {
+          "key": "date",
+          "label": "Date",
+          "weight": 0.13,
+          "value": 93
+        },
+        {
+          "key": "color",
+          "label": "Colour",
+          "weight": 0.12,
+          "value": 0
+        },
+        {
+          "key": "brand",
+          "label": "Brand",
+          "weight": 0.05,
+          "value": 0
+        }
+      ],
+      "reverse_score": 14
+    },
+    {
+      "a": "L1",
+      "b": "F4",
+      "score": 31,
+      "reasons": [
+        "Similar description: cover",
+        "Same category: Electronics"
+      ],
+      "breakdown": [
+        {
+          "key": "text",
+          "label": "Description",
+          "weight": 0.35,
+          "value": 18
+        },
+        {
+          "key": "category",
+          "label": "Category",
+          "weight": 0.2,
+          "value": 100
+        },
+        {
+          "key": "location",
+          "label": "Location",
+          "weight": 0.15,
+          "value": 0
+        },
+        {
+          "key": "date",
+          "label": "Date",
+          "weight": 0.13,
+          "value": 5
+        },
+        {
+          "key": "color",
+          "label": "Colour",
+          "weight": 0.12,
+          "value": 0
+        },
+        {
+          "key": "brand",
+          "label": "Brand",
+          "weight": 0.05,
+          "value": 0
+        }
+      ],
+      "reverse_score": 31
+    },
+    {
+      "a": "L1",
+      "b": "F5",
+      "score": 28,
+      "reasons": [
+        "Similar description: blue",
+        "Nearby location: floor",
+        "Lost and found on the same day"
+      ],
+      "breakdown": [
+        {
+          "key": "text",
+          "label": "Description",
+          "weight": 0.35,
+          "value": 18
+        },
+        {
+          "key": "category",
+          "label": "Category",
+          "weight": 0.2,
+          "value": 0
+        },
+        {
+          "key": "location",
+          "label": "Location",
+          "weight": 0.15,
+          "value": 33
+        },
+        {
+          "key": "date",
+          "label": "Date",
+          "weight": 0.13,
+          "value": 100
+        },
+        {
+          "key": "color",
+          "label": "Colour",
+          "weight": 0.12,
+          "value": 0
+        },
+        {
+          "key": "brand",
+          "label": "Brand",
+          "weight": 0.05,
+          "value": 0
+        }
+      ],
+      "reverse_score": 28
+    },
+    {
+      "a": "L1",
+      "b": "F6",
+      "score": 21,
+      "reasons": [
+        "Similar description: blue, cover",
+        "Found 2 days after it was lost"
+      ],
+      "breakdown": [
+        {
+          "key": "text",
+          "label": "Description",
+          "weight": 0.35,
+          "value": 18
+        },
+        {
+          "key": "category",
+          "label": "Category",
+          "weight": 0.2,
+          "value": 0
+        },
+        {
+          "key": "location",
+          "label": "Location",
+          "weight": 0.15,
+          "value": 0
+        },
+        {
+          "key": "date",
+          "label": "Date",
+          "weight": 0.13,
+          "value": 93
+        },
+        {
+          "key": "color",
+          "label": "Colour",
+          "weight": 0.12,
+          "value": 0
+        },
+        {
+          "key": "brand",
+          "label": "Brand",
+          "weight": 0.05,
+          "value": 0
+        }
+      ],
+      "reverse_score": 21
+    },
+    {
+      "a": "L1",
+      "b": "F7",
+      "score": 1,
+      "reasons": [],
+      "breakdown": [
+        {
+          "key": "text",
+          "label": "Description",
+          "weight": 0.35,
+          "value": 0
+        },
+        {
+          "key": "category",
+          "label": "Category",
+          "weight": 0.2,
+          "value": 0
+        },
+        {
+          "key": "location",
+          "label": "Location",
+          "weight": 0.15,
+          "value": 0
+        },
+        {
+          "key": "date",
+          "label": "Date",
+          "weight": 0.13,
+          "value": 5
+        },
+        {
+          "key": "color",
+          "label": "Colour",
+          "weight": 0.12,
+          "value": 0
+        },
+        {
+          "key": "brand",
+          "label": "Brand",
+          "weight": 0.05,
+          "value": 0
+        }
+      ],
+      "reverse_score": 1
+    },
+    {
+      "a": "L1",
+      "b": "F8",
+      "score": 14,
+      "reasons": [
+        "Found 1 day after it was lost"
+      ],
+      "breakdown": [
+        {
+          "key": "text",
+          "label": "Description",
+          "weight": 0.35,
+          "value": 0
+        },
+        {
+          "key": "category",
+          "label": "Category",
+          "weight": 0.2,
+          "value": 0
+        },
+        {
+          "key": "location",
+          "label": "Location",
+          "weight": 0.15,
+          "value": 0
+        },
+        {
+          "key": "date",
+          "label": "Date",
+          "weight": 0.13,
+          "value": 97
+        },
+        {
+          "key": "color",
+          "label": "Colour",
+          "weight": 0.12,
+          "value": 0
+        },
+        {
+          "key": "brand",
+          "label": "Brand",
+          "weight": 0.05,
+          "value": 0
+        }
+      ],
+      "reverse_score": 14
+    },
+    {
+      "a": "L1",
+      "b": "F9",
+      "score": 75,
+      "reasons": [
+        "Similar description: black, phone, apple",
+        "Same category: Electronics",
+        "Same colour (Black)",
+        "Same brand: Apple",
+        "Nearby location: library"
+      ],
+      "breakdown": [
+        {
+          "key": "text",
+          "label": "Description",
+          "weight": 0.35,
+          "value": 36
+        },
+        {
+          "key": "category",
+          "label": "Category",
+          "weight": 0.2,
+          "value": 100
+        },
+        {
+          "key": "location",
+          "label": "Location",
+          "weight": 0.15,
+          "value": 100
+        },
+        {
+          "key": "date",
+          "label": "Date",
+          "weight": 0.13,
+          "value": 5
+        },
+        {
+          "key": "color",
+          "label": "Colour",
+          "weight": 0.12,
+          "value": 100
+        },
+        {
+          "key": "brand",
+          "label": "Brand",
+          "weight": 0.05,
+          "value": 100
+        }
+      ],
+      "reverse_score": 75
+    },
+    {
+      "a": "L1",
+      "b": "F10",
+      "score": 0,
+      "reasons": [],
+      "breakdown": [
+        {
+          "key": "text",
+          "label": "Description",
+          "weight": 0.35,
+          "value": 0
+        },
+        {
+          "key": "category",
+          "label": "Category",
+          "weight": 0.2,
+          "value": 0
+        },
+        {
+          "key": "location",
+          "label": "Location",
+          "weight": 0.15,
+          "value": 0
+        },
+        {
+          "key": "date",
+          "label": "Date",
+          "weight": 0.13,
+          "value": 0
+        },
+        {
+          "key": "color",
+          "label": "Colour",
+          "weight": 0.12,
+          "value": 0
+        },
+        {
+          "key": "brand",
+          "label": "Brand",
+          "weight": 0.05,
+          "value": 0
+        }
+      ],
+      "reverse_score": 0
+    },
+    {
+      "a": "L1",
+      "b": "F11",
+      "score": 25,
+      "reasons": [
+        "Similar description: black",
+        "Same colour (Black)",
+        "Nearby location: library"
+      ],
+      "breakdown": [
+        {
+          "key": "text",
+          "label": "Description",
+          "weight": 0.35,
+          "value": 11
+        },
+        {
+          "key": "category",
+          "label": "Category",
+          "weight": 0.2,
+          "value": 0
+        },
+        {
+          "key": "location",
+          "label": "Location",
+          "weight": 0.15,
+          "value": 33
+        },
+        {
+          "key": "date",
+          "label": "Date",
+          "weight": 0.13,
+          "value": 5
+        },
+        {
+          "key": "color",
+          "label": "Colour",
+          "weight": 0.12,
+          "value": 100
+        },
+        {
+          "key": "brand",
+          "label": "Brand",
+          "weight": 0.05,
+          "value": 0
+        }
+      ],
+      "reverse_score": 25
+    },
+    {
+      "a": "L1",
+      "b": "F12",
+      "score": 97,
+      "reasons": [
+        "Similar description: black, phone, blue, cover",
+        "Same category: Electronics",
+        "Same colour (Black)",
+        "Same brand: Apple",
+        "Nearby location: central, library",
+        "Lost and found on the same day"
+      ],
+      "breakdown": [
+        {
+          "key": "text",
+          "label": "Description",
+          "weight": 0.35,
+          "value": 54
+        },
+        {
+          "key": "category",
+          "label": "Category",
+          "weight": 0.2,
+          "value": 100
+        },
+        {
+          "key": "location",
+          "label": "Location",
+          "weight": 0.15,
+          "value": 100
+        },
+        {
+          "key": "date",
+          "label": "Date",
+          "weight": 0.13,
+          "value": 100
+        },
+        {
+          "key": "color",
+          "label": "Colour",
+          "weight": 0.12,
+          "value": 100
+        },
+        {
+          "key": "brand",
+          "label": "Brand",
+          "weight": 0.05,
+          "value": 100
+        }
+      ],
+      "reverse_score": 97
+    },
+    {
+      "a": "L2",
+      "b": "F1",
+      "score": 13,
+      "reasons": [
+        "Found 3 days after it was lost"
+      ],
+      "breakdown": [
+        {
+          "key": "text",
+          "label": "Description",
+          "weight": 0.35,
+          "value": 0
+        },
+        {
+          "key": "category",
+          "label": "Category",
+          "weight": 0.2,
+          "value": 0
+        },
+        {
+          "key": "location",
+          "label": "Location",
+          "weight": 0.15,
+          "value": 0
+        },
+        {
+          "key": "date",
+          "label": "Date",
+          "weight": 0.13,
+          "value": 90
+        },
+        {
+          "key": "color",
+          "label": "Colour",
+          "weight": 0.12,
+          "value": 0
+        },
+        {
+          "key": "brand",
+          "label": "Brand",
+          "weight": 0.05,
+          "value": 0
+        }
+      ],
+      "reverse_score": 13
+    },
+    {
+      "a": "L2",
+      "b": "F2",
+      "score": 87,
+      "reasons": [
+        "Similar description: brown, leather, wallet, id",
+        "Same category: Wallets & Purses",
+        "Same colour (Brown)",
+        "Nearby location: canteen",
+        "Found 1 day after it was lost"
+      ],
+      "breakdown": [
+        {
+          "key": "text",
+          "label": "Description",
+          "weight": 0.35,
+          "value": 68
+        },
+        {
+          "key": "category",
+          "label": "Category",
+          "weight": 0.2,
+          "value": 100
+        },
+        {
+          "key": "location",
+          "label": "Location",
+          "weight": 0.15,
+          "value": 50
+        },
+        {
+          "key": "date",
+          "label": "Date",
+          "weight": 0.13,
+          "value": 97
+        },
+        {
+          "key": "color",
+          "label": "Colour",
+          "weight": 0.12,
+          "value": 100
+        },
+        {
+          "key": "brand",
+          "label": "Brand",
+          "weight": 0.05,
+          "value": 0
+        }
+      ],
+      "reverse_score": 87
+    },
+    {
+      "a": "L2",
+      "b": "F3",
+      "score": 13,
+      "reasons": [
+        "Found 4 days after it was lost"
+      ],
+      "breakdown": [
+        {
+          "key": "text",
+          "label": "Description",
+          "weight": 0.35,
+          "value": 0
+        },
+        {
+          "key": "category",
+          "label": "Category",
+          "weight": 0.2,
+          "value": 0
+        },
+        {
+          "key": "location",
+          "label": "Location",
+          "weight": 0.15,
+          "value": 0
+        },
+        {
+          "key": "date",
+          "label": "Date",
+          "weight": 0.13,
+          "value": 87
+        },
+        {
+          "key": "color",
+          "label": "Colour",
+          "weight": 0.12,
+          "value": 0
+        },
+        {
+          "key": "brand",
+          "label": "Brand",
+          "weight": 0.05,
+          "value": 0
+        }
+      ],
+      "reverse_score": 13
+    },
+    {
+      "a": "L2",
+      "b": "F4",
+      "score": 1,
+      "reasons": [],
+      "breakdown": [
+        {
+          "key": "text",
+          "label": "Description",
+          "weight": 0.35,
+          "value": 0
+        },
+        {
+          "key": "category",
+          "label": "Category",
+          "weight": 0.2,
+          "value": 0
+        },
+        {
+          "key": "location",
+          "label": "Location",
+          "weight": 0.15,
+          "value": 0
+        },
+        {
+          "key": "date",
+          "label": "Date",
+          "weight": 0.13,
+          "value": 5
+        },
+        {
+          "key": "color",
+          "label": "Colour",
+          "weight": 0.12,
+          "value": 0
+        },
+        {
+          "key": "brand",
+          "label": "Brand",
+          "weight": 0.05,
+          "value": 0
+        }
+      ],
+      "reverse_score": 1
+    },
+    {
+      "a": "L2",
+      "b": "F5",
+      "score": 14,
+      "reasons": [
+        "Found 2 days after it was lost"
+      ],
+      "breakdown": [
+        {
+          "key": "text",
+          "label": "Description",
+          "weight": 0.35,
+          "value": 0
+        },
+        {
+          "key": "category",
+          "label": "Category",
+          "weight": 0.2,
+          "value": 0
+        },
+        {
+          "key": "location",
+          "label": "Location",
+          "weight": 0.15,
+          "value": 0
+        },
+        {
+          "key": "date",
+          "label": "Date",
+          "weight": 0.13,
+          "value": 93
+        },
+        {
+          "key": "color",
+          "label": "Colour",
+          "weight": 0.12,
+          "value": 0
+        },
+        {
+          "key": "brand",
+          "label": "Brand",
+          "weight": 0.05,
+          "value": 0
+        }
+      ],
+      "reverse_score": 14
+    },
+    {
+      "a": "L2",
+      "b": "F6",
+      "score": 22,
+      "reasons": [
+        "Nearby location: main",
+        "Found 4 days after it was lost"
+      ],
+      "breakdown": [
+        {
+          "key": "text",
+          "label": "Description",
+          "weight": 0.35,
+          "value": 0
+        },
+        {
+          "key": "category",
+          "label": "Category",
+          "weight": 0.2,
+          "value": 0
+        },
+        {
+          "key": "location",
+          "label": "Location",
+          "weight": 0.15,
+          "value": 50
+        },
+        {
+          "key": "date",
+          "label": "Date",
+          "weight": 0.13,
+          "value": 87
+        },
+        {
+          "key": "color",
+          "label": "Colour",
+          "weight": 0.12,
+          "value": 0
+        },
+        {
+          "key": "brand",
+          "label": "Brand",
+          "weight": 0.05,
+          "value": 0
+        }
+      ],
+      "reverse_score": 22
+    },
+    {
+      "a": "L2",
+      "b": "F7",
+      "score": 15,
+      "reasons": [
+        "Lost and found on the same day"
+      ],
+      "breakdown": [
+        {
+          "key": "text",
+          "label": "Description",
+          "weight": 0.35,
+          "value": 0
+        },
+        {
+          "key": "category",
+          "label": "Category",
+          "weight": 0.2,
+          "value": 0
+        },
+        {
+          "key": "location",
+          "label": "Location",
+          "weight": 0.15,
+          "value": 0
+        },
+        {
+          "key": "date",
+          "label": "Date",
+          "weight": 0.13,
+          "value": 100
+        },
+        {
+          "key": "color",
+          "label": "Colour",
+          "weight": 0.12,
+          "value": 0
+        },
+        {
+          "key": "brand",
+          "label": "Brand",
+          "weight": 0.05,
+          "value": 0
+        }
+      ],
+      "reverse_score": 15
+    },
+    {
+      "a": "L2",
+      "b": "F8",
+      "score": 13,
+      "reasons": [
+        "Found 3 days after it was lost"
+      ],
+      "breakdown": [
+        {
+          "key": "text",
+          "label": "Description",
+          "weight": 0.35,
+          "value": 0
+        },
+        {
+          "key": "category",
+          "label": "Category",
+          "weight": 0.2,
+          "value": 0
+        },
+        {
+          "key": "location",
+          "label": "Location",
+          "weight": 0.15,
+          "value": 0
+        },
+        {
+          "key": "date",
+          "label": "Date",
+          "weight": 0.13,
+          "value": 90
+        },
+        {
+          "key": "color",
+          "label": "Colour",
+          "weight": 0.12,
+          "value": 0
+        },
+        {
+          "key": "brand",
+          "label": "Brand",
+          "weight": 0.05,
+          "value": 0
+        }
+      ],
+      "reverse_score": 13
+    },
+    {
+      "a": "L2",
+      "b": "F9",
+      "score": 1,
+      "reasons": [],
+      "breakdown": [
+        {
+          "key": "text",
+          "label": "Description",
+          "weight": 0.35,
+          "value": 0
+        },
+        {
+          "key": "category",
+          "label": "Category",
+          "weight": 0.2,
+          "value": 0
+        },
+        {
+          "key": "location",
+          "label": "Location",
+          "weight": 0.15,
+          "value": 0
+        },
+        {
+          "key": "date",
+          "label": "Date",
+          "weight": 0.13,
+          "value": 5
+        },
+        {
+          "key": "color",
+          "label": "Colour",
+          "weight": 0.12,
+          "value": 0
+        },
+        {
+          "key": "brand",
+          "label": "Brand",
+          "weight": 0.05,
+          "value": 0
+        }
+      ],
+      "reverse_score": 1
+    },
+    {
+      "a": "L2",
+      "b": "F10",
+      "score": 0,
+      "reasons": [],
+      "breakdown": [
+        {
+          "key": "text",
+          "label": "Description",
+          "weight": 0.35,
+          "value": 0
+        },
+        {
+          "key": "category",
+          "label": "Category",
+          "weight": 0.2,
+          "value": 0
+        },
+        {
+          "key": "location",
+          "label": "Location",
+          "weight": 0.15,
+          "value": 0
+        },
+        {
+          "key": "date",
+          "label": "Date",
+          "weight": 0.13,
+          "value": 0
+        },
+        {
+          "key": "color",
+          "label": "Colour",
+          "weight": 0.12,
+          "value": 0
+        },
+        {
+          "key": "brand",
+          "label": "Brand",
+          "weight": 0.05,
+          "value": 0
+        }
+      ],
+      "reverse_score": 0
+    },
+    {
+      "a": "L2",
+      "b": "F11",
+      "score": 1,
+      "reasons": [],
+      "breakdown": [
+        {
+          "key": "text",
+          "label": "Description",
+          "weight": 0.35,
+          "value": 0
+        },
+        {
+          "key": "category",
+          "label": "Category",
+          "weight": 0.2,
+          "value": 0
+        },
+        {
+          "key": "location",
+          "label": "Location",
+          "weight": 0.15,
+          "value": 0
+        },
+        {
+          "key": "date",
+          "label": "Date",
+          "weight": 0.13,
+          "value": 5
+        },
+        {
+          "key": "color",
+          "label": "Colour",
+          "weight": 0.12,
+          "value": 0
+        },
+        {
+          "key": "brand",
+          "label": "Brand",
+          "weight": 0.05,
+          "value": 0
+        }
+      ],
+      "reverse_score": 1
+    },
+    {
+      "a": "L2",
+      "b": "F12",
+      "score": 14,
+      "reasons": [
+        "Found 2 days after it was lost"
+      ],
+      "breakdown": [
+        {
+          "key": "text",
+          "label": "Description",
+          "weight": 0.35,
+          "value": 0
+        },
+        {
+          "key": "category",
+          "label": "Category",
+          "weight": 0.2,
+          "value": 0
+        },
+        {
+          "key": "location",
+          "label": "Location",
+          "weight": 0.15,
+          "value": 0
+        },
+        {
+          "key": "date",
+          "label": "Date",
+          "weight": 0.13,
+          "value": 93
+        },
+        {
+          "key": "color",
+          "label": "Colour",
+          "weight": 0.12,
+          "value": 0
+        },
+        {
+          "key": "brand",
+          "label": "Brand",
+          "weight": 0.05,
+          "value": 0
+        }
+      ],
+      "reverse_score": 14
+    },
+    {
+      "a": "L3",
+      "b": "F1",
+      "score": 30,
+      "reasons": [
+        "Similar description: blue, cover, black, small",
+        "Lost and found on the same day"
+      ],
+      "breakdown": [
+        {
+          "key": "text",
+          "label": "Description",
+          "weight": 0.35,
+          "value": 37
+        },
+        {
+          "key": "category",
+          "label": "Category",
+          "weight": 0.2,
+          "value": 0
+        },
+        {
+          "key": "location",
+          "label": "Location",
+          "weight": 0.15,
+          "value": 0
+        },
+        {
+          "key": "date",
+          "label": "Date",
+          "weight": 0.13,
+          "value": 100
+        },
+        {
+          "key": "color",
+          "label": "Colour",
+          "weight": 0.12,
+          "value": 0
+        },
+        {
+          "key": "brand",
+          "label": "Brand",
+          "weight": 0.05,
+          "value": 0
+        }
+      ],
+      "reverse_score": 30
+    },
+    {
+      "a": "L3",
+      "b": "F2",
+      "score": 15,
+      "reasons": [
+        "Lost and found on the same day"
+      ],
+      "breakdown": [
+        {
+          "key": "text",
+          "label": "Description",
+          "weight": 0.35,
+          "value": 0
+        },
+        {
+          "key": "category",
+          "label": "Category",
+          "weight": 0.2,
+          "value": 0
+        },
+        {
+          "key": "location",
+          "label": "Location",
+          "weight": 0.15,
+          "value": 0
+        },
+        {
+          "key": "date",
+          "label": "Date",
+          "weight": 0.13,
+          "value": 100
+        },
+        {
+          "key": "color",
+          "label": "Colour",
+          "weight": 0.12,
+          "value": 0
+        },
+        {
+          "key": "brand",
+          "label": "Brand",
+          "weight": 0.05,
+          "value": 0
+        }
+      ],
+      "reverse_score": 15
+    },
+    {
+      "a": "L3",
+      "b": "F3",
+      "score": 20,
+      "reasons": [
+        "Similar description: key",
+        "Found 1 day after it was lost"
+      ],
+      "breakdown": [
+        {
+          "key": "text",
+          "label": "Description",
+          "weight": 0.35,
+          "value": 14
+        },
+        {
+          "key": "category",
+          "label": "Category",
+          "weight": 0.2,
+          "value": 0
+        },
+        {
+          "key": "location",
+          "label": "Location",
+          "weight": 0.15,
+          "value": 0
+        },
+        {
+          "key": "date",
+          "label": "Date",
+          "weight": 0.13,
+          "value": 97
+        },
+        {
+          "key": "color",
+          "label": "Colour",
+          "weight": 0.12,
+          "value": 0
+        },
+        {
+          "key": "brand",
+          "label": "Brand",
+          "weight": 0.05,
+          "value": 0
+        }
+      ],
+      "reverse_score": 20
+    },
+    {
+      "a": "L3",
+      "b": "F4",
+      "score": 4,
+      "reasons": [
+        "Similar description: cover"
+      ],
+      "breakdown": [
+        {
+          "key": "text",
+          "label": "Description",
+          "weight": 0.35,
+          "value": 8
+        },
+        {
+          "key": "category",
+          "label": "Category",
+          "weight": 0.2,
+          "value": 0
+        },
+        {
+          "key": "location",
+          "label": "Location",
+          "weight": 0.15,
+          "value": 0
+        },
+        {
+          "key": "date",
+          "label": "Date",
+          "weight": 0.13,
+          "value": 5
+        },
+        {
+          "key": "color",
+          "label": "Colour",
+          "weight": 0.12,
+          "value": 0
+        },
+        {
+          "key": "brand",
+          "label": "Brand",
+          "weight": 0.05,
+          "value": 0
+        }
+      ],
+      "reverse_score": 4
+    },
+    {
+      "a": "L3",
+      "b": "F5",
+      "score": 39,
+      "reasons": [
+        "Similar description: blue",
+        "Same colour (Blue)",
+        "Lost and found on the same day"
+      ],
+      "breakdown": [
+        {
+          "key": "text",
+          "label": "Description",
+          "weight": 0.35,
+          "value": 24
+        },
+        {
+          "key": "category",
+          "label": "Category",
+          "weight": 0.2,
+          "value": 0
+        },
+        {
+          "key": "location",
+          "label": "Location",
+          "weight": 0.15,
+          "value": 0
+        },
+        {
+          "key": "date",
+          "label": "Date",
+          "weight": 0.13,
+          "value": 100
+        },
+        {
+          "key": "color",
+          "label": "Colour",
+          "weight": 0.12,
+          "value": 100
+        },
+        {
+          "key": "brand",
+          "label": "Brand",
+          "weight": 0.05,
+          "value": 0
+        }
+      ],
+      "reverse_score": 39
+    },
+    {
+      "a": "L3",
+      "b": "F6",
+      "score": 91,
+      "reasons": [
+        "Similar description: blue, bag, notebook, pencil",
+        "Same category: Bags",
+        "Same colour (Blue)",
+        "Nearby location: bus, stop, main, gate",
+        "Found 1 day after it was lost"
+      ],
+      "breakdown": [
+        {
+          "key": "text",
+          "label": "Description",
+          "weight": 0.35,
+          "value": 55
+        },
+        {
+          "key": "category",
+          "label": "Category",
+          "weight": 0.2,
+          "value": 100
+        },
+        {
+          "key": "location",
+          "label": "Location",
+          "weight": 0.15,
+          "value": 100
+        },
+        {
+          "key": "date",
+          "label": "Date",
+          "weight": 0.13,
+          "value": 97
+        },
+        {
+          "key": "color",
+          "label": "Colour",
+          "weight": 0.12,
+          "value": 100
+        },
+        {
+          "key": "brand",
+          "label": "Brand",
+          "weight": 0.05,
+          "value": 0
+        }
+      ],
+      "reverse_score": 91
+    },
+    {
+      "a": "L3",
+      "b": "F7",
+      "score": 1,
+      "reasons": [],
+      "breakdown": [
+        {
+          "key": "text",
+          "label": "Description",
+          "weight": 0.35,
+          "value": 0
+        },
+        {
+          "key": "category",
+          "label": "Category",
+          "weight": 0.2,
+          "value": 0
+        },
+        {
+          "key": "location",
+          "label": "Location",
+          "weight": 0.15,
+          "value": 0
+        },
+        {
+          "key": "date",
+          "label": "Date",
+          "weight": 0.13,
+          "value": 5
+        },
+        {
+          "key": "color",
+          "label": "Colour",
+          "weight": 0.12,
+          "value": 0
+        },
+        {
+          "key": "brand",
+          "label": "Brand",
+          "weight": 0.05,
+          "value": 0
+        }
+      ],
+      "reverse_score": 1
+    },
+    {
+      "a": "L3",
+      "b": "F8",
+      "score": 15,
+      "reasons": [
+        "Lost and found on the same day"
+      ],
+      "breakdown": [
+        {
+          "key": "text",
+          "label": "Description",
+          "weight": 0.35,
+          "value": 0
+        },
+        {
+          "key": "category",
+          "label": "Category",
+          "weight": 0.2,
+          "value": 0
+        },
+        {
+          "key": "location",
+          "label": "Location",
+          "weight": 0.15,
+          "value": 0
+        },
+        {
+          "key": "date",
+          "label": "Date",
+          "weight": 0.13,
+          "value": 100
+        },
+        {
+          "key": "color",
+          "label": "Colour",
+          "weight": 0.12,
+          "value": 0
+        },
+        {
+          "key": "brand",
+          "label": "Brand",
+          "weight": 0.05,
+          "value": 0
+        }
+      ],
+      "reverse_score": 15
+    },
+    {
+      "a": "L3",
+      "b": "F9",
+      "score": 2,
+      "reasons": [
+        "Similar description: black"
+      ],
+      "breakdown": [
+        {
+          "key": "text",
+          "label": "Description",
+          "weight": 0.35,
+          "value": 4
+        },
+        {
+          "key": "category",
+          "label": "Category",
+          "weight": 0.2,
+          "value": 0
+        },
+        {
+          "key": "location",
+          "label": "Location",
+          "weight": 0.15,
+          "value": 0
+        },
+        {
+          "key": "date",
+          "label": "Date",
+          "weight": 0.13,
+          "value": 5
+        },
+        {
+          "key": "color",
+          "label": "Colour",
+          "weight": 0.12,
+          "value": 0
+        },
+        {
+          "key": "brand",
+          "label": "Brand",
+          "weight": 0.05,
+          "value": 0
+        }
+      ],
+      "reverse_score": 2
+    },
+    {
+      "a": "L3",
+      "b": "F10",
+      "score": 24,
+      "reasons": [
+        "Similar description: key",
+        "Nearby location: gate"
+      ],
+      "breakdown": [
+        {
+          "key": "text",
+          "label": "Description",
+          "weight": 0.35,
+          "value": 17
+        },
+        {
+          "key": "category",
+          "label": "Category",
+          "weight": 0.2,
+          "value": 0
+        },
+        {
+          "key": "location",
+          "label": "Location",
+          "weight": 0.15,
+          "value": 100
+        },
+        {
+          "key": "date",
+          "label": "Date",
+          "weight": 0.13,
+          "value": 0
+        },
+        {
+          "key": "color",
+          "label": "Colour",
+          "weight": 0.12,
+          "value": 0
+        },
+        {
+          "key": "brand",
+          "label": "Brand",
+          "weight": 0.05,
+          "value": 0
+        }
+      ],
+      "reverse_score": 24
+    },
+    {
+      "a": "L3",
+      "b": "F11",
+      "score": 15,
+      "reasons": [
+        "Similar description: black, umbrella",
+        "Nearby location: gate"
+      ],
+      "breakdown": [
+        {
+          "key": "text",
+          "label": "Description",
+          "weight": 0.35,
+          "value": 20
+        },
+        {
+          "key": "category",
+          "label": "Category",
+          "weight": 0.2,
+          "value": 0
+        },
+        {
+          "key": "location",
+          "label": "Location",
+          "weight": 0.15,
+          "value": 33
+        },
+        {
+          "key": "date",
+          "label": "Date",
+          "weight": 0.13,
+          "value": 5
+        },
+        {
+          "key": "color",
+          "label": "Colour",
+          "weight": 0.12,
+          "value": 0
+        },
+        {
+          "key": "brand",
+          "label": "Brand",
+          "weight": 0.05,
+          "value": 0
+        }
+      ],
+      "reverse_score": 15
+    },
+    {
+      "a": "L3",
+      "b": "F12",
+      "score": 23,
+      "reasons": [
+        "Similar description: blue, cover, black",
+        "Lost and found on the same day"
+      ],
+      "breakdown": [
+        {
+          "key": "text",
+          "label": "Description",
+          "weight": 0.35,
+          "value": 20
+        },
+        {
+          "key": "category",
+          "label": "Category",
+          "weight": 0.2,
+          "value": 0
+        },
+        {
+          "key": "location",
+          "label": "Location",
+          "weight": 0.15,
+          "value": 0
+        },
+        {
+          "key": "date",
+          "label": "Date",
+          "weight": 0.13,
+          "value": 100
+        },
+        {
+          "key": "color",
+          "label": "Colour",
+          "weight": 0.12,
+          "value": 0
+        },
+        {
+          "key": "brand",
+          "label": "Brand",
+          "weight": 0.05,
+          "value": 0
+        }
+      ],
+      "reverse_score": 23
+    },
+    {
+      "a": "L4",
+      "b": "F1",
+      "score": 52,
+      "reasons": [
+        "Similar description: black",
+        "Same category: Electronics",
+        "Same colour (Black)",
+        "Found 5 days after it was lost"
+      ],
+      "breakdown": [
+        {
+          "key": "text",
+          "label": "Description",
+          "weight": 0.35,
+          "value": 6
+        },
+        {
+          "key": "category",
+          "label": "Category",
+          "weight": 0.2,
+          "value": 100
+        },
+        {
+          "key": "location",
+          "label": "Location",
+          "weight": 0.15,
+          "value": 0
+        },
+        {
+          "key": "date",
+          "label": "Date",
+          "weight": 0.13,
+          "value": 83
+        },
+        {
+          "key": "color",
+          "label": "Colour",
+          "weight": 0.12,
+          "value": 100
+        },
+        {
+          "key": "brand",
+          "label": "Brand",
+          "weight": 0.05,
+          "value": 0
+        }
+      ],
+      "reverse_score": 52
+    },
+    {
+      "a": "L4",
+      "b": "F2",
+      "score": 13,
+      "reasons": [
+        "Found 3 days after it was lost"
+      ],
+      "breakdown": [
+        {
+          "key": "text",
+          "label": "Description",
+          "weight": 0.35,
+          "value": 0
+        },
+        {
+          "key": "category",
+          "label": "Category",
+          "weight": 0.2,
+          "value": 0
+        },
+        {
+          "key": "location",
+          "label": "Location",
+          "weight": 0.15,
+          "value": 0
+        },
+        {
+          "key": "date",
+          "label": "Date",
+          "weight": 0.13,
+          "value": 90
+        },
+        {
+          "key": "color",
+          "label": "Colour",
+          "weight": 0.12,
+          "value": 0
+        },
+        {
+          "key": "brand",
+          "label": "Brand",
+          "weight": 0.05,
+          "value": 0
+        }
+      ],
+      "reverse_score": 13
+    },
+    {
+      "a": "L4",
+      "b": "F3",
+      "score": 12,
+      "reasons": [
+        "Found 6 days after it was lost"
+      ],
+      "breakdown": [
+        {
+          "key": "text",
+          "label": "Description",
+          "weight": 0.35,
+          "value": 0
+        },
+        {
+          "key": "category",
+          "label": "Category",
+          "weight": 0.2,
+          "value": 0
+        },
+        {
+          "key": "location",
+          "label": "Location",
+          "weight": 0.15,
+          "value": 0
+        },
+        {
+          "key": "date",
+          "label": "Date",
+          "weight": 0.13,
+          "value": 80
+        },
+        {
+          "key": "color",
+          "label": "Colour",
+          "weight": 0.12,
+          "value": 0
+        },
+        {
+          "key": "brand",
+          "label": "Brand",
+          "weight": 0.05,
+          "value": 0
+        }
+      ],
+      "reverse_score": 12
+    },
+    {
+      "a": "L4",
+      "b": "F4",
+      "score": 41,
+      "reasons": [
+        "Similar description: charger",
+        "Same category: Electronics",
+        "Lost and found on the same day"
+      ],
+      "breakdown": [
+        {
+          "key": "text",
+          "label": "Description",
+          "weight": 0.35,
+          "value": 8
+        },
+        {
+          "key": "category",
+          "label": "Category",
+          "weight": 0.2,
+          "value": 100
+        },
+        {
+          "key": "location",
+          "label": "Location",
+          "weight": 0.15,
+          "value": 0
+        },
+        {
+          "key": "date",
+          "label": "Date",
+          "weight": 0.13,
+          "value": 100
+        },
+        {
+          "key": "color",
+          "label": "Colour",
+          "weight": 0.12,
+          "value": 0
+        },
+        {
+          "key": "brand",
+          "label": "Brand",
+          "weight": 0.05,
+          "value": 0
+        }
+      ],
+      "reverse_score": 41
+    },
+    {
+      "a": "L4",
+      "b": "F5",
+      "score": 13,
+      "reasons": [
+        "Found 4 days after it was lost"
+      ],
+      "breakdown": [
+        {
+          "key": "text",
+          "label": "Description",
+          "weight": 0.35,
+          "value": 0
+        },
+        {
+          "key": "category",
+          "label": "Category",
+          "weight": 0.2,
+          "value": 0
+        },
+        {
+          "key": "location",
+          "label": "Location",
+          "weight": 0.15,
+          "value": 0
+        },
+        {
+          "key": "date",
+          "label": "Date",
+          "weight": 0.13,
+          "value": 87
+        },
+        {
+          "key": "color",
+          "label": "Colour",
+          "weight": 0.12,
+          "value": 0
+        },
+        {
+          "key": "brand",
+          "label": "Brand",
+          "weight": 0.05,
+          "value": 0
+        }
+      ],
+      "reverse_score": 13
+    },
+    {
+      "a": "L4",
+      "b": "F6",
+      "score": 12,
+      "reasons": [
+        "Found 6 days after it was lost"
+      ],
+      "breakdown": [
+        {
+          "key": "text",
+          "label": "Description",
+          "weight": 0.35,
+          "value": 0
+        },
+        {
+          "key": "category",
+          "label": "Category",
+          "weight": 0.2,
+          "value": 0
+        },
+        {
+          "key": "location",
+          "label": "Location",
+          "weight": 0.15,
+          "value": 0
+        },
+        {
+          "key": "date",
+          "label": "Date",
+          "weight": 0.13,
+          "value": 80
+        },
+        {
+          "key": "color",
+          "label": "Colour",
+          "weight": 0.12,
+          "value": 0
+        },
+        {
+          "key": "brand",
+          "label": "Brand",
+          "weight": 0.05,
+          "value": 0
+        }
+      ],
+      "reverse_score": 12
+    },
+    {
+      "a": "L4",
+      "b": "F7",
+      "score": 20,
+      "reasons": [
+        "Nearby location: lab",
+        "Found 1 day after it was lost"
+      ],
+      "breakdown": [
+        {
+          "key": "text",
+          "label": "Description",
+          "weight": 0.35,
+          "value": 0
+        },
+        {
+          "key": "category",
+          "label": "Category",
+          "weight": 0.2,
+          "value": 0
+        },
+        {
+          "key": "location",
+          "label": "Location",
+          "weight": 0.15,
+          "value": 33
+        },
+        {
+          "key": "date",
+          "label": "Date",
+          "weight": 0.13,
+          "value": 97
+        },
+        {
+          "key": "color",
+          "label": "Colour",
+          "weight": 0.12,
+          "value": 0
+        },
+        {
+          "key": "brand",
+          "label": "Brand",
+          "weight": 0.05,
+          "value": 0
+        }
+      ],
+      "reverse_score": 20
+    },
+    {
+      "a": "L4",
+      "b": "F8",
+      "score": 12,
+      "reasons": [
+        "Found 5 days after it was lost"
+      ],
+      "breakdown": [
+        {
+          "key": "text",
+          "label": "Description",
+          "weight": 0.35,
+          "value": 0
+        },
+        {
+          "key": "category",
+          "label": "Category",
+          "weight": 0.2,
+          "value": 0
+        },
+        {
+          "key": "location",
+          "label": "Location",
+          "weight": 0.15,
+          "value": 0
+        },
+        {
+          "key": "date",
+          "label": "Date",
+          "weight": 0.13,
+          "value": 83
+        },
+        {
+          "key": "color",
+          "label": "Colour",
+          "weight": 0.12,
+          "value": 0
+        },
+        {
+          "key": "brand",
+          "label": "Brand",
+          "weight": 0.05,
+          "value": 0
+        }
+      ],
+      "reverse_score": 12
+    },
+    {
+      "a": "L4",
+      "b": "F9",
+      "score": 39,
+      "reasons": [
+        "Similar description: black",
+        "Same category: Electronics",
+        "Same colour (Black)"
+      ],
+      "breakdown": [
+        {
+          "key": "text",
+          "label": "Description",
+          "weight": 0.35,
+          "value": 3
+        },
+        {
+          "key": "category",
+          "label": "Category",
+          "weight": 0.2,
+          "value": 100
+        },
+        {
+          "key": "location",
+          "label": "Location",
+          "weight": 0.15,
+          "value": 0
+        },
+        {
+          "key": "date",
+          "label": "Date",
+          "weight": 0.13,
+          "value": 5
+        },
+        {
+          "key": "color",
+          "label": "Colour",
+          "weight": 0.12,
+          "value": 100
+        },
+        {
+          "key": "brand",
+          "label": "Brand",
+          "weight": 0.05,
+          "value": 0
+        }
+      ],
+      "reverse_score": 39
+    },
+    {
+      "a": "L4",
+      "b": "F10",
+      "score": 0,
+      "reasons": [],
+      "breakdown": [
+        {
+          "key": "text",
+          "label": "Description",
+          "weight": 0.35,
+          "value": 0
+        },
+        {
+          "key": "category",
+          "label": "Category",
+          "weight": 0.2,
+          "value": 0
+        },
+        {
+          "key": "location",
+          "label": "Location",
+          "weight": 0.15,
+          "value": 0
+        },
+        {
+          "key": "date",
+          "label": "Date",
+          "weight": 0.13,
+          "value": 0
+        },
+        {
+          "key": "color",
+          "label": "Colour",
+          "weight": 0.12,
+          "value": 0
+        },
+        {
+          "key": "brand",
+          "label": "Brand",
+          "weight": 0.05,
+          "value": 0
+        }
+      ],
+      "reverse_score": 0
+    },
+    {
+      "a": "L4",
+      "b": "F11",
+      "score": 31,
+      "reasons": [
+        "Similar description: black",
+        "Same colour (Black)",
+        "Lost and found on the same day"
+      ],
+      "breakdown": [
+        {
+          "key": "text",
+          "label": "Description",
+          "weight": 0.35,
+          "value": 5
+        },
+        {
+          "key": "category",
+          "label": "Category",
+          "weight": 0.2,
+          "value": 0
+        },
+        {
+          "key": "location",
+          "label": "Location",
+          "weight": 0.15,
+          "value": 0
+        },
+        {
+          "key": "date",
+          "label": "Date",
+          "weight": 0.13,
+          "value": 100
+        },
+        {
+          "key": "color",
+          "label": "Colour",
+          "weight": 0.12,
+          "value": 100
+        },
+        {
+          "key": "brand",
+          "label": "Brand",
+          "weight": 0.05,
+          "value": 0
+        }
+      ],
+      "reverse_score": 31
+    },
+    {
+      "a": "L4",
+      "b": "F12",
+      "score": 53,
+      "reasons": [
+        "Similar description: black",
+        "Same category: Electronics",
+        "Same colour (Black)",
+        "Found 4 days after it was lost"
+      ],
+      "breakdown": [
+        {
+          "key": "text",
+          "label": "Description",
+          "weight": 0.35,
+          "value": 8
+        },
+        {
+          "key": "category",
+          "label": "Category",
+          "weight": 0.2,
+          "value": 100
+        },
+        {
+          "key": "location",
+          "label": "Location",
+          "weight": 0.15,
+          "value": 0
+        },
+        {
+          "key": "date",
+          "label": "Date",
+          "weight": 0.13,
+          "value": 87
+        },
+        {
+          "key": "color",
+          "label": "Colour",
+          "weight": 0.12,
+          "value": 100
+        },
+        {
+          "key": "brand",
+          "label": "Brand",
+          "weight": 0.05,
+          "value": 0
+        }
+      ],
+      "reverse_score": 53
+    },
+    {
+      "a": "L5",
+      "b": "F1",
+      "score": 15,
+      "reasons": [
+        "Lost and found on the same day"
+      ],
+      "breakdown": [
+        {
+          "key": "text",
+          "label": "Description",
+          "weight": 0.35,
+          "value": 0
+        },
+        {
+          "key": "category",
+          "label": "Category",
+          "weight": 0.2,
+          "value": 0
+        },
+        {
+          "key": "location",
+          "label": "Location",
+          "weight": 0.15,
+          "value": 0
+        },
+        {
+          "key": "date",
+          "label": "Date",
+          "weight": 0.13,
+          "value": 100
+        },
+        {
+          "key": "color",
+          "label": "Colour",
+          "weight": 0.12,
+          "value": 0
+        },
+        {
+          "key": "brand",
+          "label": "Brand",
+          "weight": 0.05,
+          "value": 0
+        }
+      ],
+      "reverse_score": 15
+    },
+    {
+      "a": "L5",
+      "b": "F2",
+      "score": 17,
+      "reasons": [
+        "Similar description: id, card"
+      ],
+      "breakdown": [
+        {
+          "key": "text",
+          "label": "Description",
+          "weight": 0.35,
+          "value": 40
+        },
+        {
+          "key": "category",
+          "label": "Category",
+          "weight": 0.2,
+          "value": 0
+        },
+        {
+          "key": "location",
+          "label": "Location",
+          "weight": 0.15,
+          "value": 0
+        },
+        {
+          "key": "date",
+          "label": "Date",
+          "weight": 0.13,
+          "value": 5
+        },
+        {
+          "key": "color",
+          "label": "Colour",
+          "weight": 0.12,
+          "value": 0
+        },
+        {
+          "key": "brand",
+          "label": "Brand",
+          "weight": 0.05,
+          "value": 0
+        }
+      ],
+      "reverse_score": 17
+    },
+    {
+      "a": "L5",
+      "b": "F3",
+      "score": 32,
+      "reasons": [
+        "Similar description: red",
+        "Same colour (Red)",
+        "Lost and found on the same day"
+      ],
+      "breakdown": [
+        {
+          "key": "text",
+          "label": "Description",
+          "weight": 0.35,
+          "value": 7
+        },
+        {
+          "key": "category",
+          "label": "Category",
+          "weight": 0.2,
+          "value": 0
+        },
+        {
+          "key": "location",
+          "label": "Location",
+          "weight": 0.15,
+          "value": 0
+        },
+        {
+          "key": "date",
+          "label": "Date",
+          "weight": 0.13,
+          "value": 100
+        },
+        {
+          "key": "color",
+          "label": "Colour",
+          "weight": 0.12,
+          "value": 100
+        },
+        {
+          "key": "brand",
+          "label": "Brand",
+          "weight": 0.05,
+          "value": 0
+        }
+      ],
+      "reverse_score": 32
+    },
+    {
+      "a": "L5",
+      "b": "F4",
+      "score": 1,
+      "reasons": [],
+      "breakdown": [
+        {
+          "key": "text",
+          "label": "Description",
+          "weight": 0.35,
+          "value": 0
+        },
+        {
+          "key": "category",
+          "label": "Category",
+          "weight": 0.2,
+          "value": 0
+        },
+        {
+          "key": "location",
+          "label": "Location",
+          "weight": 0.15,
+          "value": 0
+        },
+        {
+          "key": "date",
+          "label": "Date",
+          "weight": 0.13,
+          "value": 5
+        },
+        {
+          "key": "color",
+          "label": "Colour",
+          "weight": 0.12,
+          "value": 0
+        },
+        {
+          "key": "brand",
+          "label": "Brand",
+          "weight": 0.05,
+          "value": 0
+        }
+      ],
+      "reverse_score": 1
+    },
+    {
+      "a": "L5",
+      "b": "F5",
+      "score": 24,
+      "reasons": [
+        "Nearby location: gym",
+        "Lost and found on the same day"
+      ],
+      "breakdown": [
+        {
+          "key": "text",
+          "label": "Description",
+          "weight": 0.35,
+          "value": 0
+        },
+        {
+          "key": "category",
+          "label": "Category",
+          "weight": 0.2,
+          "value": 0
+        },
+        {
+          "key": "location",
+          "label": "Location",
+          "weight": 0.15,
+          "value": 50
+        },
+        {
+          "key": "date",
+          "label": "Date",
+          "weight": 0.13,
+          "value": 100
+        },
+        {
+          "key": "color",
+          "label": "Colour",
+          "weight": 0.12,
+          "value": 0
+        },
+        {
+          "key": "brand",
+          "label": "Brand",
+          "weight": 0.05,
+          "value": 0
+        }
+      ],
+      "reverse_score": 24
+    },
+    {
+      "a": "L5",
+      "b": "F6",
+      "score": 15,
+      "reasons": [
+        "Lost and found on the same day"
+      ],
+      "breakdown": [
+        {
+          "key": "text",
+          "label": "Description",
+          "weight": 0.35,
+          "value": 0
+        },
+        {
+          "key": "category",
+          "label": "Category",
+          "weight": 0.2,
+          "value": 0
+        },
+        {
+          "key": "location",
+          "label": "Location",
+          "weight": 0.15,
+          "value": 0
+        },
+        {
+          "key": "date",
+          "label": "Date",
+          "weight": 0.13,
+          "value": 100
+        },
+        {
+          "key": "color",
+          "label": "Colour",
+          "weight": 0.12,
+          "value": 0
+        },
+        {
+          "key": "brand",
+          "label": "Brand",
+          "weight": 0.05,
+          "value": 0
+        }
+      ],
+      "reverse_score": 15
+    },
+    {
+      "a": "L5",
+      "b": "F7",
+      "score": 1,
+      "reasons": [],
+      "breakdown": [
+        {
+          "key": "text",
+          "label": "Description",
+          "weight": 0.35,
+          "value": 0
+        },
+        {
+          "key": "category",
+          "label": "Category",
+          "weight": 0.2,
+          "value": 0
+        },
+        {
+          "key": "location",
+          "label": "Location",
+          "weight": 0.15,
+          "value": 0
+        },
+        {
+          "key": "date",
+          "label": "Date",
+          "weight": 0.13,
+          "value": 5
+        },
+        {
+          "key": "color",
+          "label": "Colour",
+          "weight": 0.12,
+          "value": 0
+        },
+        {
+          "key": "brand",
+          "label": "Brand",
+          "weight": 0.05,
+          "value": 0
+        }
+      ],
+      "reverse_score": 1
+    },
+    {
+      "a": "L5",
+      "b": "F8",
+      "score": 15,
+      "reasons": [
+        "Lost and found on the same day"
+      ],
+      "breakdown": [
+        {
+          "key": "text",
+          "label": "Description",
+          "weight": 0.35,
+          "value": 0
+        },
+        {
+          "key": "category",
+          "label": "Category",
+          "weight": 0.2,
+          "value": 0
+        },
+        {
+          "key": "location",
+          "label": "Location",
+          "weight": 0.15,
+          "value": 0
+        },
+        {
+          "key": "date",
+          "label": "Date",
+          "weight": 0.13,
+          "value": 100
+        },
+        {
+          "key": "color",
+          "label": "Colour",
+          "weight": 0.12,
+          "value": 0
+        },
+        {
+          "key": "brand",
+          "label": "Brand",
+          "weight": 0.05,
+          "value": 0
+        }
+      ],
+      "reverse_score": 15
+    },
+    {
+      "a": "L5",
+      "b": "F9",
+      "score": 1,
+      "reasons": [],
+      "breakdown": [
+        {
+          "key": "text",
+          "label": "Description",
+          "weight": 0.35,
+          "value": 0
+        },
+        {
+          "key": "category",
+          "label": "Category",
+          "weight": 0.2,
+          "value": 0
+        },
+        {
+          "key": "location",
+          "label": "Location",
+          "weight": 0.15,
+          "value": 0
+        },
+        {
+          "key": "date",
+          "label": "Date",
+          "weight": 0.13,
+          "value": 5
+        },
+        {
+          "key": "color",
+          "label": "Colour",
+          "weight": 0.12,
+          "value": 0
+        },
+        {
+          "key": "brand",
+          "label": "Brand",
+          "weight": 0.05,
+          "value": 0
+        }
+      ],
+      "reverse_score": 1
+    },
+    {
+      "a": "L5",
+      "b": "F10",
+      "score": 0,
+      "reasons": [],
+      "breakdown": [
+        {
+          "key": "text",
+          "label": "Description",
+          "weight": 0.35,
+          "value": 0
+        },
+        {
+          "key": "category",
+          "label": "Category",
+          "weight": 0.2,
+          "value": 0
+        },
+        {
+          "key": "location",
+          "label": "Location",
+          "weight": 0.15,
+          "value": 0
+        },
+        {
+          "key": "date",
+          "label": "Date",
+          "weight": 0.13,
+          "value": 0
+        },
+        {
+          "key": "color",
+          "label": "Colour",
+          "weight": 0.12,
+          "value": 0
+        },
+        {
+          "key": "brand",
+          "label": "Brand",
+          "weight": 0.05,
+          "value": 0
+        }
+      ],
+      "reverse_score": 0
+    },
+    {
+      "a": "L5",
+      "b": "F11",
+      "score": 1,
+      "reasons": [],
+      "breakdown": [
+        {
+          "key": "text",
+          "label": "Description",
+          "weight": 0.35,
+          "value": 0
+        },
+        {
+          "key": "category",
+          "label": "Category",
+          "weight": 0.2,
+          "value": 0
+        },
+        {
+          "key": "location",
+          "label": "Location",
+          "weight": 0.15,
+          "value": 0
+        },
+        {
+          "key": "date",
+          "label": "Date",
+          "weight": 0.13,
+          "value": 5
+        },
+        {
+          "key": "color",
+          "label": "Colour",
+          "weight": 0.12,
+          "value": 0
+        },
+        {
+          "key": "brand",
+          "label": "Brand",
+          "weight": 0.05,
+          "value": 0
+        }
+      ],
+      "reverse_score": 1
+    },
+    {
+      "a": "L5",
+      "b": "F12",
+      "score": 15,
+      "reasons": [
+        "Lost and found on the same day"
+      ],
+      "breakdown": [
+        {
+          "key": "text",
+          "label": "Description",
+          "weight": 0.35,
+          "value": 0
+        },
+        {
+          "key": "category",
+          "label": "Category",
+          "weight": 0.2,
+          "value": 0
+        },
+        {
+          "key": "location",
+          "label": "Location",
+          "weight": 0.15,
+          "value": 0
+        },
+        {
+          "key": "date",
+          "label": "Date",
+          "weight": 0.13,
+          "value": 100
+        },
+        {
+          "key": "color",
+          "label": "Colour",
+          "weight": 0.12,
+          "value": 0
+        },
+        {
+          "key": "brand",
+          "label": "Brand",
+          "weight": 0.05,
+          "value": 0
+        }
+      ],
+      "reverse_score": 15
+    },
+    {
+      "a": "L6",
+      "b": "F1",
+      "score": 50,
+      "reasons": [
+        "Similar description: cover, small, apple",
+        "Same category: Electronics",
+        "Same brand: Apple",
+        "Found 7 days after it was lost"
+      ],
+      "breakdown": [
+        {
+          "key": "text",
+          "label": "Description",
+          "weight": 0.35,
+          "value": 26
+        },
+        {
+          "key": "category",
+          "label": "Category",
+          "weight": 0.2,
+          "value": 100
+        },
+        {
+          "key": "location",
+          "label": "Location",
+          "weight": 0.15,
+          "value": 0
+        },
+        {
+          "key": "date",
+          "label": "Date",
+          "weight": 0.13,
+          "value": 77
+        },
+        {
+          "key": "color",
+          "label": "Colour",
+          "weight": 0.12,
+          "value": 0
+        },
+        {
+          "key": "brand",
+          "label": "Brand",
+          "weight": 0.05,
+          "value": 100
+        }
+      ],
+      "reverse_score": 50
+    },
+    {
+      "a": "L6",
+      "b": "F2",
+      "score": 12,
+      "reasons": [
+        "Found 5 days after it was lost"
+      ],
+      "breakdown": [
+        {
+          "key": "text",
+          "label": "Description",
+          "weight": 0.35,
+          "value": 0
+        },
+        {
+          "key": "category",
+          "label": "Category",
+          "weight": 0.2,
+          "value": 0
+        },
+        {
+          "key": "location",
+          "label": "Location",
+          "weight": 0.15,
+          "value": 0
+        },
+        {
+          "key": "date",
+          "label": "Date",
+          "weight": 0.13,
+          "value": 83
+        },
+        {
+          "key": "color",
+          "label": "Colour",
+          "weight": 0.12,
+          "value": 0
+        },
+        {
+          "key": "brand",
+          "label": "Brand",
+          "weight": 0.05,
+          "value": 0
+        }
+      ],
+      "reverse_score": 12
+    },
+    {
+      "a": "L6",
+      "b": "F3",
+      "score": 11,
+      "reasons": [],
+      "breakdown": [
+        {
+          "key": "text",
+          "label": "Description",
+          "weight": 0.35,
+          "value": 0
+        },
+        {
+          "key": "category",
+          "label": "Category",
+          "weight": 0.2,
+          "value": 0
+        },
+        {
+          "key": "location",
+          "label": "Location",
+          "weight": 0.15,
+          "value": 0
+        },
+        {
+          "key": "date",
+          "label": "Date",
+          "weight": 0.13,
+          "value": 73
+        },
+        {
+          "key": "color",
+          "label": "Colour",
+          "weight": 0.12,
+          "value": 0
+        },
+        {
+          "key": "brand",
+          "label": "Brand",
+          "weight": 0.05,
+          "value": 0
+        }
+      ],
+      "reverse_score": 11
+    },
+    {
+      "a": "L6",
+      "b": "F4",
+      "score": 89,
+      "reasons": [
+        "Similar description: white, earbud, cover, charger",
+        "Same category: Electronics",
+        "Same colour (White)",
+        "Nearby location: auditorium",
+        "Found 1 day after it was lost"
+      ],
+      "breakdown": [
+        {
+          "key": "text",
+          "label": "Description",
+          "weight": 0.35,
+          "value": 73
+        },
+        {
+          "key": "category",
+          "label": "Category",
+          "weight": 0.2,
+          "value": 100
+        },
+        {
+          "key": "location",
+          "label": "Location",
+          "weight": 0.15,
+          "value": 50
+        },
+        {
+          "key": "date",
+          "label": "Date",
+          "weight": 0.13,
+          "value": 97
+        },
+        {
+          "key": "color",
+          "label": "Colour",
+          "weight": 0.12,
+          "value": 100
+        },
+        {
+          "key": "brand",
+          "label": "Brand",
+          "weight": 0.05,
+          "value": 0
+        }
+      ],
+      "reverse_score": 89
+    },
+    {
+      "a": "L6",
+      "b": "F5",
+      "score": 12,
+      "reasons": [
+        "Found 6 days after it was lost"
+      ],
+      "breakdown": [
+        {
+          "key": "text",
+          "label": "Description",
+          "weight": 0.35,
+          "value": 0
+        },
+        {
+          "key": "category",
+          "label": "Category",
+          "weight": 0.2,
+          "value": 0
+        },
+        {
+          "key": "location",
+          "label": "Location",
+          "weight": 0.15,
+          "value": 0
+        },
+        {
+          "key": "date",
+          "label": "Date",
+          "weight": 0.13,
+          "value": 80
+        },
+        {
+          "key": "color",
+          "label": "Colour",
+          "weight": 0.12,
+          "value": 0
+        },
+        {
+          "key": "brand",
+          "label": "Brand",
+          "weight": 0.05,
+          "value": 0
+        }
+      ],
+      "reverse_score": 12
+    },
+    {
+      "a": "L6",
+      "b": "F6",
+      "score": 22,
+      "reasons": [
+        "Similar description: cover",
+        "Nearby location: main"
+      ],
+      "breakdown": [
+        {
+          "key": "text",
+          "label": "Description",
+          "weight": 0.35,
+          "value": 7
+        },
+        {
+          "key": "category",
+          "label": "Category",
+          "weight": 0.2,
+          "value": 0
+        },
+        {
+          "key": "location",
+          "label": "Location",
+          "weight": 0.15,
+          "value": 50
+        },
+        {
+          "key": "date",
+          "label": "Date",
+          "weight": 0.13,
+          "value": 73
+        },
+        {
+          "key": "color",
+          "label": "Colour",
+          "weight": 0.12,
+          "value": 0
+        },
+        {
+          "key": "brand",
+          "label": "Brand",
+          "weight": 0.05,
+          "value": 0
+        }
+      ],
+      "reverse_score": 22
+    },
+    {
+      "a": "L6",
+      "b": "F7",
+      "score": 13,
+      "reasons": [
+        "Found 3 days after it was lost"
+      ],
+      "breakdown": [
+        {
+          "key": "text",
+          "label": "Description",
+          "weight": 0.35,
+          "value": 0
+        },
+        {
+          "key": "category",
+          "label": "Category",
+          "weight": 0.2,
+          "value": 0
+        },
+        {
+          "key": "location",
+          "label": "Location",
+          "weight": 0.15,
+          "value": 0
+        },
+        {
+          "key": "date",
+          "label": "Date",
+          "weight": 0.13,
+          "value": 90
+        },
+        {
+          "key": "color",
+          "label": "Colour",
+          "weight": 0.12,
+          "value": 0
+        },
+        {
+          "key": "brand",
+          "label": "Brand",
+          "weight": 0.05,
+          "value": 0
+        }
+      ],
+      "reverse_score": 13
+    },
+    {
+      "a": "L6",
+      "b": "F8",
+      "score": 20,
+      "reasons": [
+        "Nearby location: auditorium",
+        "Found 7 days after it was lost"
+      ],
+      "breakdown": [
+        {
+          "key": "text",
+          "label": "Description",
+          "weight": 0.35,
+          "value": 0
+        },
+        {
+          "key": "category",
+          "label": "Category",
+          "weight": 0.2,
+          "value": 0
+        },
+        {
+          "key": "location",
+          "label": "Location",
+          "weight": 0.15,
+          "value": 50
+        },
+        {
+          "key": "date",
+          "label": "Date",
+          "weight": 0.13,
+          "value": 77
+        },
+        {
+          "key": "color",
+          "label": "Colour",
+          "weight": 0.12,
+          "value": 0
+        },
+        {
+          "key": "brand",
+          "label": "Brand",
+          "weight": 0.05,
+          "value": 0
+        }
+      ],
+      "reverse_score": 20
+    },
+    {
+      "a": "L6",
+      "b": "F9",
+      "score": 31,
+      "reasons": [
+        "Similar description: apple",
+        "Same category: Electronics",
+        "Same brand: Apple"
+      ],
+      "breakdown": [
+        {
+          "key": "text",
+          "label": "Description",
+          "weight": 0.35,
+          "value": 3
+        },
+        {
+          "key": "category",
+          "label": "Category",
+          "weight": 0.2,
+          "value": 100
+        },
+        {
+          "key": "location",
+          "label": "Location",
+          "weight": 0.15,
+          "value": 0
+        },
+        {
+          "key": "date",
+          "label": "Date",
+          "weight": 0.13,
+          "value": 5
+        },
+        {
+          "key": "color",
+          "label": "Colour",
+          "weight": 0.12,
+          "value": 0
+        },
+        {
+          "key": "brand",
+          "label": "Brand",
+          "weight": 0.05,
+          "value": 100
+        }
+      ],
+      "reverse_score": 31
+    },
+    {
+      "a": "L6",
+      "b": "F10",
+      "score": 0,
+      "reasons": [],
+      "breakdown": [
+        {
+          "key": "text",
+          "label": "Description",
+          "weight": 0.35,
+          "value": 0
+        },
+        {
+          "key": "category",
+          "label": "Category",
+          "weight": 0.2,
+          "value": 0
+        },
+        {
+          "key": "location",
+          "label": "Location",
+          "weight": 0.15,
+          "value": 0
+        },
+        {
+          "key": "date",
+          "label": "Date",
+          "weight": 0.13,
+          "value": 0
+        },
+        {
+          "key": "color",
+          "label": "Colour",
+          "weight": 0.12,
+          "value": 0
+        },
+        {
+          "key": "brand",
+          "label": "Brand",
+          "weight": 0.05,
+          "value": 0
+        }
+      ],
+      "reverse_score": 0
+    },
+    {
+      "a": "L6",
+      "b": "F11",
+      "score": 14,
+      "reasons": [
+        "Found 1 day after it was lost"
+      ],
+      "breakdown": [
+        {
+          "key": "text",
+          "label": "Description",
+          "weight": 0.35,
+          "value": 0
+        },
+        {
+          "key": "category",
+          "label": "Category",
+          "weight": 0.2,
+          "value": 0
+        },
+        {
+          "key": "location",
+          "label": "Location",
+          "weight": 0.15,
+          "value": 0
+        },
+        {
+          "key": "date",
+          "label": "Date",
+          "weight": 0.13,
+          "value": 97
+        },
+        {
+          "key": "color",
+          "label": "Colour",
+          "weight": 0.12,
+          "value": 0
+        },
+        {
+          "key": "brand",
+          "label": "Brand",
+          "weight": 0.05,
+          "value": 0
+        }
+      ],
+      "reverse_score": 14
+    },
+    {
+      "a": "L6",
+      "b": "F12",
+      "score": 45,
+      "reasons": [
+        "Similar description: cover, apple",
+        "Same category: Electronics",
+        "Same brand: Apple",
+        "Found 6 days after it was lost"
+      ],
+      "breakdown": [
+        {
+          "key": "text",
+          "label": "Description",
+          "weight": 0.35,
+          "value": 10
+        },
+        {
+          "key": "category",
+          "label": "Category",
+          "weight": 0.2,
+          "value": 100
+        },
+        {
+          "key": "location",
+          "label": "Location",
+          "weight": 0.15,
+          "value": 0
+        },
+        {
+          "key": "date",
+          "label": "Date",
+          "weight": 0.13,
+          "value": 80
+        },
+        {
+          "key": "color",
+          "label": "Colour",
+          "weight": 0.12,
+          "value": 0
+        },
+        {
+          "key": "brand",
+          "label": "Brand",
+          "weight": 0.05,
+          "value": 100
+        }
+      ],
+      "reverse_score": 45
+    },
+    {
+      "a": "L7",
+      "b": "F1",
+      "score": 12,
+      "reasons": [
+        "Found 6 days after it was lost"
+      ],
+      "breakdown": [
+        {
+          "key": "text",
+          "label": "Description",
+          "weight": 0.35,
+          "value": 0
+        },
+        {
+          "key": "category",
+          "label": "Category",
+          "weight": 0.2,
+          "value": 0
+        },
+        {
+          "key": "location",
+          "label": "Location",
+          "weight": 0.15,
+          "value": 0
+        },
+        {
+          "key": "date",
+          "label": "Date",
+          "weight": 0.13,
+          "value": 80
+        },
+        {
+          "key": "color",
+          "label": "Colour",
+          "weight": 0.12,
+          "value": 0
+        },
+        {
+          "key": "brand",
+          "label": "Brand",
+          "weight": 0.05,
+          "value": 0
+        }
+      ],
+      "reverse_score": 12
+    },
+    {
+      "a": "L7",
+      "b": "F2",
+      "score": 13,
+      "reasons": [
+        "Found 4 days after it was lost"
+      ],
+      "breakdown": [
+        {
+          "key": "text",
+          "label": "Description",
+          "weight": 0.35,
+          "value": 0
+        },
+        {
+          "key": "category",
+          "label": "Category",
+          "weight": 0.2,
+          "value": 0
+        },
+        {
+          "key": "location",
+          "label": "Location",
+          "weight": 0.15,
+          "value": 0
+        },
+        {
+          "key": "date",
+          "label": "Date",
+          "weight": 0.13,
+          "value": 87
+        },
+        {
+          "key": "color",
+          "label": "Colour",
+          "weight": 0.12,
+          "value": 0
+        },
+        {
+          "key": "brand",
+          "label": "Brand",
+          "weight": 0.05,
+          "value": 0
+        }
+      ],
+      "reverse_score": 13
+    },
+    {
+      "a": "L7",
+      "b": "F3",
+      "score": 11,
+      "reasons": [
+        "Found 7 days after it was lost"
+      ],
+      "breakdown": [
+        {
+          "key": "text",
+          "label": "Description",
+          "weight": 0.35,
+          "value": 0
+        },
+        {
+          "key": "category",
+          "label": "Category",
+          "weight": 0.2,
+          "value": 0
+        },
+        {
+          "key": "location",
+          "label": "Location",
+          "weight": 0.15,
+          "value": 0
+        },
+        {
+          "key": "date",
+          "label": "Date",
+          "weight": 0.13,
+          "value": 77
+        },
+        {
+          "key": "color",
+          "label": "Colour",
+          "weight": 0.12,
+          "value": 0
+        },
+        {
+          "key": "brand",
+          "label": "Brand",
+          "weight": 0.05,
+          "value": 0
+        }
+      ],
+      "reverse_score": 11
+    },
+    {
+      "a": "L7",
+      "b": "F4",
+      "score": 15,
+      "reasons": [
+        "Lost and found on the same day"
+      ],
+      "breakdown": [
+        {
+          "key": "text",
+          "label": "Description",
+          "weight": 0.35,
+          "value": 0
+        },
+        {
+          "key": "category",
+          "label": "Category",
+          "weight": 0.2,
+          "value": 0
+        },
+        {
+          "key": "location",
+          "label": "Location",
+          "weight": 0.15,
+          "value": 0
+        },
+        {
+          "key": "date",
+          "label": "Date",
+          "weight": 0.13,
+          "value": 100
+        },
+        {
+          "key": "color",
+          "label": "Colour",
+          "weight": 0.12,
+          "value": 0
+        },
+        {
+          "key": "brand",
+          "label": "Brand",
+          "weight": 0.05,
+          "value": 0
+        }
+      ],
+      "reverse_score": 15
+    },
+    {
+      "a": "L7",
+      "b": "F5",
+      "score": 12,
+      "reasons": [
+        "Found 5 days after it was lost"
+      ],
+      "breakdown": [
+        {
+          "key": "text",
+          "label": "Description",
+          "weight": 0.35,
+          "value": 0
+        },
+        {
+          "key": "category",
+          "label": "Category",
+          "weight": 0.2,
+          "value": 0
+        },
+        {
+          "key": "location",
+          "label": "Location",
+          "weight": 0.15,
+          "value": 0
+        },
+        {
+          "key": "date",
+          "label": "Date",
+          "weight": 0.13,
+          "value": 83
+        },
+        {
+          "key": "color",
+          "label": "Colour",
+          "weight": 0.12,
+          "value": 0
+        },
+        {
+          "key": "brand",
+          "label": "Brand",
+          "weight": 0.05,
+          "value": 0
+        }
+      ],
+      "reverse_score": 12
+    },
+    {
+      "a": "L7",
+      "b": "F6",
+      "score": 11,
+      "reasons": [
+        "Found 7 days after it was lost"
+      ],
+      "breakdown": [
+        {
+          "key": "text",
+          "label": "Description",
+          "weight": 0.35,
+          "value": 0
+        },
+        {
+          "key": "category",
+          "label": "Category",
+          "weight": 0.2,
+          "value": 0
+        },
+        {
+          "key": "location",
+          "label": "Location",
+          "weight": 0.15,
+          "value": 0
+        },
+        {
+          "key": "date",
+          "label": "Date",
+          "weight": 0.13,
+          "value": 77
+        },
+        {
+          "key": "color",
+          "label": "Colour",
+          "weight": 0.12,
+          "value": 0
+        },
+        {
+          "key": "brand",
+          "label": "Brand",
+          "weight": 0.05,
+          "value": 0
+        }
+      ],
+      "reverse_score": 11
+    },
+    {
+      "a": "L7",
+      "b": "F7",
+      "score": 99,
+      "reasons": [
+        "Similar description: grey, casio, calculator, fx",
+        "Same category: Books & Stationery",
+        "Similar colour (Silver / Gray)",
+        "Same brand:  casio ",
+        "Nearby location: physic, lab",
+        "Found 2 days after it was lost"
+      ],
+      "breakdown": [
+        {
+          "key": "text",
+          "label": "Description",
+          "weight": 0.35,
+          "value": 83
+        },
+        {
+          "key": "category",
+          "label": "Category",
+          "weight": 0.2,
+          "value": 100
+        },
+        {
+          "key": "location",
+          "label": "Location",
+          "weight": 0.15,
+          "value": 100
+        },
+        {
+          "key": "date",
+          "label": "Date",
+          "weight": 0.13,
+          "value": 93
+        },
+        {
+          "key": "color",
+          "label": "Colour",
+          "weight": 0.12,
+          "value": 60
+        },
+        {
+          "key": "brand",
+          "label": "Brand",
+          "weight": 0.05,
+          "value": 100
+        }
+      ],
+      "reverse_score": 99
+    },
+    {
+      "a": "L7",
+      "b": "F8",
+      "score": 31,
+      "reasons": [
+        "Similar description: grey",
+        "Similar colour (Silver / Gray)",
+        "Found 6 days after it was lost"
+      ],
+      "breakdown": [
+        {
+          "key": "text",
+          "label": "Description",
+          "weight": 0.35,
+          "value": 26
+        },
+        {
+          "key": "category",
+          "label": "Category",
+          "weight": 0.2,
+          "value": 0
+        },
+        {
+          "key": "location",
+          "label": "Location",
+          "weight": 0.15,
+          "value": 0
+        },
+        {
+          "key": "date",
+          "label": "Date",
+          "weight": 0.13,
+          "value": 80
+        },
+        {
+          "key": "color",
+          "label": "Colour",
+          "weight": 0.12,
+          "value": 60
+        },
+        {
+          "key": "brand",
+          "label": "Brand",
+          "weight": 0.05,
+          "value": 0
+        }
+      ],
+      "reverse_score": 31
+    },
+    {
+      "a": "L7",
+      "b": "F9",
+      "score": 1,
+      "reasons": [],
+      "breakdown": [
+        {
+          "key": "text",
+          "label": "Description",
+          "weight": 0.35,
+          "value": 0
+        },
+        {
+          "key": "category",
+          "label": "Category",
+          "weight": 0.2,
+          "value": 0
+        },
+        {
+          "key": "location",
+          "label": "Location",
+          "weight": 0.15,
+          "value": 0
+        },
+        {
+          "key": "date",
+          "label": "Date",
+          "weight": 0.13,
+          "value": 5
+        },
+        {
+          "key": "color",
+          "label": "Colour",
+          "weight": 0.12,
+          "value": 0
+        },
+        {
+          "key": "brand",
+          "label": "Brand",
+          "weight": 0.05,
+          "value": 0
+        }
+      ],
+      "reverse_score": 1
+    },
+    {
+      "a": "L7",
+      "b": "F10",
+      "score": 14,
+      "reasons": [
+        "Same colour (Silver)"
+      ],
+      "breakdown": [
+        {
+          "key": "text",
+          "label": "Description",
+          "weight": 0.35,
+          "value": 0
+        },
+        {
+          "key": "category",
+          "label": "Category",
+          "weight": 0.2,
+          "value": 0
+        },
+        {
+          "key": "location",
+          "label": "Location",
+          "weight": 0.15,
+          "value": 0
+        },
+        {
+          "key": "date",
+          "label": "Date",
+          "weight": 0.13,
+          "value": 0
+        },
+        {
+          "key": "color",
+          "label": "Colour",
+          "weight": 0.12,
+          "value": 100
+        },
+        {
+          "key": "brand",
+          "label": "Brand",
+          "weight": 0.05,
+          "value": 0
+        }
+      ],
+      "reverse_score": 14
+    },
+    {
+      "a": "L7",
+      "b": "F11",
+      "score": 15,
+      "reasons": [
+        "Lost and found on the same day"
+      ],
+      "breakdown": [
+        {
+          "key": "text",
+          "label": "Description",
+          "weight": 0.35,
+          "value": 0
+        },
+        {
+          "key": "category",
+          "label": "Category",
+          "weight": 0.2,
+          "value": 0
+        },
+        {
+          "key": "location",
+          "label": "Location",
+          "weight": 0.15,
+          "value": 0
+        },
+        {
+          "key": "date",
+          "label": "Date",
+          "weight": 0.13,
+          "value": 100
+        },
+        {
+          "key": "color",
+          "label": "Colour",
+          "weight": 0.12,
+          "value": 0
+        },
+        {
+          "key": "brand",
+          "label": "Brand",
+          "weight": 0.05,
+          "value": 0
+        }
+      ],
+      "reverse_score": 15
+    },
+    {
+      "a": "L7",
+      "b": "F12",
+      "score": 12,
+      "reasons": [
+        "Found 5 days after it was lost"
+      ],
+      "breakdown": [
+        {
+          "key": "text",
+          "label": "Description",
+          "weight": 0.35,
+          "value": 0
+        },
+        {
+          "key": "category",
+          "label": "Category",
+          "weight": 0.2,
+          "value": 0
+        },
+        {
+          "key": "location",
+          "label": "Location",
+          "weight": 0.15,
+          "value": 0
+        },
+        {
+          "key": "date",
+          "label": "Date",
+          "weight": 0.13,
+          "value": 83
+        },
+        {
+          "key": "color",
+          "label": "Colour",
+          "weight": 0.12,
+          "value": 0
+        },
+        {
+          "key": "brand",
+          "label": "Brand",
+          "weight": 0.05,
+          "value": 0
+        }
+      ],
+      "reverse_score": 12
+    },
+    {
+      "a": "L8",
+      "b": "F1",
+      "score": 20,
+      "reasons": [],
+      "breakdown": [
+        {
+          "key": "text",
+          "label": "Description",
+          "weight": 0.35,
+          "value": 0
+        },
+        {
+          "key": "category",
+          "label": "Category",
+          "weight": 0.2,
+          "value": 0
+        },
+        {
+          "key": "location",
+          "label": "Location",
+          "weight": 0.15,
+          "value": 30
+        },
+        {
+          "key": "date",
+          "label": "Date",
+          "weight": 0.13,
+          "value": 50
+        },
+        {
+          "key": "color",
+          "label": "Colour",
+          "weight": 0.12,
+          "value": 50
+        },
+        {
+          "key": "brand",
+          "label": "Brand",
+          "weight": 0.05,
+          "value": 0
+        }
+      ],
+      "reverse_score": 20
+    },
+    {
+      "a": "L8",
+      "b": "F2",
+      "score": 20,
+      "reasons": [],
+      "breakdown": [
+        {
+          "key": "text",
+          "label": "Description",
+          "weight": 0.35,
+          "value": 0
+        },
+        {
+          "key": "category",
+          "label": "Category",
+          "weight": 0.2,
+          "value": 0
+        },
+        {
+          "key": "location",
+          "label": "Location",
+          "weight": 0.15,
+          "value": 30
+        },
+        {
+          "key": "date",
+          "label": "Date",
+          "weight": 0.13,
+          "value": 50
+        },
+        {
+          "key": "color",
+          "label": "Colour",
+          "weight": 0.12,
+          "value": 50
+        },
+        {
+          "key": "brand",
+          "label": "Brand",
+          "weight": 0.05,
+          "value": 0
+        }
+      ],
+      "reverse_score": 20
+    },
+    {
+      "a": "L8",
+      "b": "F3",
+      "score": 77,
+      "reasons": [
+        "Similar description: key",
+        "Same category: Keys"
+      ],
+      "breakdown": [
+        {
+          "key": "text",
+          "label": "Description",
+          "weight": 0.35,
+          "value": 86
+        },
+        {
+          "key": "category",
+          "label": "Category",
+          "weight": 0.2,
+          "value": 100
+        },
+        {
+          "key": "location",
+          "label": "Location",
+          "weight": 0.15,
+          "value": 30
+        },
+        {
+          "key": "date",
+          "label": "Date",
+          "weight": 0.13,
+          "value": 50
+        },
+        {
+          "key": "color",
+          "label": "Colour",
+          "weight": 0.12,
+          "value": 50
+        },
+        {
+          "key": "brand",
+          "label": "Brand",
+          "weight": 0.05,
+          "value": 0
+        }
+      ],
+      "reverse_score": 77
+    },
+    {
+      "a": "L8",
+      "b": "F4",
+      "score": 20,
+      "reasons": [],
+      "breakdown": [
+        {
+          "key": "text",
+          "label": "Description",
+          "weight": 0.35,
+          "value": 0
+        },
+        {
+          "key": "category",
+          "label": "Category",
+          "weight": 0.2,
+          "value": 0
+        },
+        {
+          "key": "location",
+          "label": "Location",
+          "weight": 0.15,
+          "value": 30
+        },
+        {
+          "key": "date",
+          "label": "Date",
+          "weight": 0.13,
+          "value": 50
+        },
+        {
+          "key": "color",
+          "label": "Colour",
+          "weight": 0.12,
+          "value": 50
+        },
+        {
+          "key": "brand",
+          "label": "Brand",
+          "weight": 0.05,
+          "value": 0
+        }
+      ],
+      "reverse_score": 20
+    },
+    {
+      "a": "L8",
+      "b": "F5",
+      "score": 20,
+      "reasons": [],
+      "breakdown": [
+        {
+          "key": "text",
+          "label": "Description",
+          "weight": 0.35,
+          "value": 0
+        },
+        {
+          "key": "category",
+          "label": "Category",
+          "weight": 0.2,
+          "value": 0
+        },
+        {
+          "key": "location",
+          "label": "Location",
+          "weight": 0.15,
+          "value": 30
+        },
+        {
+          "key": "date",
+          "label": "Date",
+          "weight": 0.13,
+          "value": 50
+        },
+        {
+          "key": "color",
+          "label": "Colour",
+          "weight": 0.12,
+          "value": 50
+        },
+        {
+          "key": "brand",
+          "label": "Brand",
+          "weight": 0.05,
+          "value": 0
+        }
+      ],
+      "reverse_score": 20
+    },
+    {
+      "a": "L8",
+      "b": "F6",
+      "score": 20,
+      "reasons": [],
+      "breakdown": [
+        {
+          "key": "text",
+          "label": "Description",
+          "weight": 0.35,
+          "value": 0
+        },
+        {
+          "key": "category",
+          "label": "Category",
+          "weight": 0.2,
+          "value": 0
+        },
+        {
+          "key": "location",
+          "label": "Location",
+          "weight": 0.15,
+          "value": 30
+        },
+        {
+          "key": "date",
+          "label": "Date",
+          "weight": 0.13,
+          "value": 50
+        },
+        {
+          "key": "color",
+          "label": "Colour",
+          "weight": 0.12,
+          "value": 50
+        },
+        {
+          "key": "brand",
+          "label": "Brand",
+          "weight": 0.05,
+          "value": 0
+        }
+      ],
+      "reverse_score": 20
+    },
+    {
+      "a": "L8",
+      "b": "F7",
+      "score": 20,
+      "reasons": [],
+      "breakdown": [
+        {
+          "key": "text",
+          "label": "Description",
+          "weight": 0.35,
+          "value": 0
+        },
+        {
+          "key": "category",
+          "label": "Category",
+          "weight": 0.2,
+          "value": 0
+        },
+        {
+          "key": "location",
+          "label": "Location",
+          "weight": 0.15,
+          "value": 30
+        },
+        {
+          "key": "date",
+          "label": "Date",
+          "weight": 0.13,
+          "value": 50
+        },
+        {
+          "key": "color",
+          "label": "Colour",
+          "weight": 0.12,
+          "value": 50
+        },
+        {
+          "key": "brand",
+          "label": "Brand",
+          "weight": 0.05,
+          "value": 0
+        }
+      ],
+      "reverse_score": 20
+    },
+    {
+      "a": "L8",
+      "b": "F8",
+      "score": 20,
+      "reasons": [],
+      "breakdown": [
+        {
+          "key": "text",
+          "label": "Description",
+          "weight": 0.35,
+          "value": 0
+        },
+        {
+          "key": "category",
+          "label": "Category",
+          "weight": 0.2,
+          "value": 0
+        },
+        {
+          "key": "location",
+          "label": "Location",
+          "weight": 0.15,
+          "value": 30
+        },
+        {
+          "key": "date",
+          "label": "Date",
+          "weight": 0.13,
+          "value": 50
+        },
+        {
+          "key": "color",
+          "label": "Colour",
+          "weight": 0.12,
+          "value": 50
+        },
+        {
+          "key": "brand",
+          "label": "Brand",
+          "weight": 0.05,
+          "value": 0
+        }
+      ],
+      "reverse_score": 20
+    },
+    {
+      "a": "L8",
+      "b": "F9",
+      "score": 20,
+      "reasons": [],
+      "breakdown": [
+        {
+          "key": "text",
+          "label": "Description",
+          "weight": 0.35,
+          "value": 0
+        },
+        {
+          "key": "category",
+          "label": "Category",
+          "weight": 0.2,
+          "value": 0
+        },
+        {
+          "key": "location",
+          "label": "Location",
+          "weight": 0.15,
+          "value": 30
+        },
+        {
+          "key": "date",
+          "label": "Date",
+          "weight": 0.13,
+          "value": 50
+        },
+        {
+          "key": "color",
+          "label": "Colour",
+          "weight": 0.12,
+          "value": 50
+        },
+        {
+          "key": "brand",
+          "label": "Brand",
+          "weight": 0.05,
+          "value": 0
+        }
+      ],
+      "reverse_score": 20
+    },
+    {
+      "a": "L8",
+      "b": "F10",
+      "score": 83,
+      "reasons": [
+        "Similar description: key",
+        "Same category: Keys"
+      ],
+      "breakdown": [
+        {
+          "key": "text",
+          "label": "Description",
+          "weight": 0.35,
+          "value": 100
+        },
+        {
+          "key": "category",
+          "label": "Category",
+          "weight": 0.2,
+          "value": 100
+        },
+        {
+          "key": "location",
+          "label": "Location",
+          "weight": 0.15,
+          "value": 30
+        },
+        {
+          "key": "date",
+          "label": "Date",
+          "weight": 0.13,
+          "value": 50
+        },
+        {
+          "key": "color",
+          "label": "Colour",
+          "weight": 0.12,
+          "value": 50
+        },
+        {
+          "key": "brand",
+          "label": "Brand",
+          "weight": 0.05,
+          "value": 0
+        }
+      ],
+      "reverse_score": 83
+    },
+    {
+      "a": "L8",
+      "b": "F11",
+      "score": 20,
+      "reasons": [],
+      "breakdown": [
+        {
+          "key": "text",
+          "label": "Description",
+          "weight": 0.35,
+          "value": 0
+        },
+        {
+          "key": "category",
+          "label": "Category",
+          "weight": 0.2,
+          "value": 0
+        },
+        {
+          "key": "location",
+          "label": "Location",
+          "weight": 0.15,
+          "value": 30
+        },
+        {
+          "key": "date",
+          "label": "Date",
+          "weight": 0.13,
+          "value": 50
+        },
+        {
+          "key": "color",
+          "label": "Colour",
+          "weight": 0.12,
+          "value": 50
+        },
+        {
+          "key": "brand",
+          "label": "Brand",
+          "weight": 0.05,
+          "value": 0
+        }
+      ],
+      "reverse_score": 20
+    },
+    {
+      "a": "L8",
+      "b": "F12",
+      "score": 20,
+      "reasons": [],
+      "breakdown": [
+        {
+          "key": "text",
+          "label": "Description",
+          "weight": 0.35,
+          "value": 0
+        },
+        {
+          "key": "category",
+          "label": "Category",
+          "weight": 0.2,
+          "value": 0
+        },
+        {
+          "key": "location",
+          "label": "Location",
+          "weight": 0.15,
+          "value": 30
+        },
+        {
+          "key": "date",
+          "label": "Date",
+          "weight": 0.13,
+          "value": 50
+        },
+        {
+          "key": "color",
+          "label": "Colour",
+          "weight": 0.12,
+          "value": 50
+        },
+        {
+          "key": "brand",
+          "label": "Brand",
+          "weight": 0.05,
+          "value": 0
+        }
+      ],
+      "reverse_score": 20
+    },
+    {
+      "a": "L9",
+      "b": "F1",
+      "score": 22,
+      "reasons": [
+        "Similar description: blue, cover",
+        "Lost and found on the same day"
+      ],
+      "breakdown": [
+        {
+          "key": "text",
+          "label": "Description",
+          "weight": 0.35,
+          "value": 18
+        },
+        {
+          "key": "category",
+          "label": "Category",
+          "weight": 0.2,
+          "value": 0
+        },
+        {
+          "key": "location",
+          "label": "Location",
+          "weight": 0.15,
+          "value": 0
+        },
+        {
+          "key": "date",
+          "label": "Date",
+          "weight": 0.13,
+          "value": 100
+        },
+        {
+          "key": "color",
+          "label": "Colour",
+          "weight": 0.12,
+          "value": 0
+        },
+        {
+          "key": "brand",
+          "label": "Brand",
+          "weight": 0.05,
+          "value": 0
+        }
+      ],
+      "reverse_score": 22
+    },
+    {
+      "a": "L9",
+      "b": "F2",
+      "score": 1,
+      "reasons": [],
+      "breakdown": [
+        {
+          "key": "text",
+          "label": "Description",
+          "weight": 0.35,
+          "value": 0
+        },
+        {
+          "key": "category",
+          "label": "Category",
+          "weight": 0.2,
+          "value": 0
+        },
+        {
+          "key": "location",
+          "label": "Location",
+          "weight": 0.15,
+          "value": 0
+        },
+        {
+          "key": "date",
+          "label": "Date",
+          "weight": 0.13,
+          "value": 5
+        },
+        {
+          "key": "color",
+          "label": "Colour",
+          "weight": 0.12,
+          "value": 0
+        },
+        {
+          "key": "brand",
+          "label": "Brand",
+          "weight": 0.05,
+          "value": 0
+        }
+      ],
+      "reverse_score": 1
+    },
+    {
+      "a": "L9",
+      "b": "F3",
+      "score": 15,
+      "reasons": [
+        "Lost and found on the same day"
+      ],
+      "breakdown": [
+        {
+          "key": "text",
+          "label": "Description",
+          "weight": 0.35,
+          "value": 0
+        },
+        {
+          "key": "category",
+          "label": "Category",
+          "weight": 0.2,
+          "value": 0
+        },
+        {
+          "key": "location",
+          "label": "Location",
+          "weight": 0.15,
+          "value": 0
+        },
+        {
+          "key": "date",
+          "label": "Date",
+          "weight": 0.13,
+          "value": 100
+        },
+        {
+          "key": "color",
+          "label": "Colour",
+          "weight": 0.12,
+          "value": 0
+        },
+        {
+          "key": "brand",
+          "label": "Brand",
+          "weight": 0.05,
+          "value": 0
+        }
+      ],
+      "reverse_score": 15
+    },
+    {
+      "a": "L9",
+      "b": "F4",
+      "score": 5,
+      "reasons": [
+        "Similar description: cover"
+      ],
+      "breakdown": [
+        {
+          "key": "text",
+          "label": "Description",
+          "weight": 0.35,
+          "value": 11
+        },
+        {
+          "key": "category",
+          "label": "Category",
+          "weight": 0.2,
+          "value": 0
+        },
+        {
+          "key": "location",
+          "label": "Location",
+          "weight": 0.15,
+          "value": 0
+        },
+        {
+          "key": "date",
+          "label": "Date",
+          "weight": 0.13,
+          "value": 5
+        },
+        {
+          "key": "color",
+          "label": "Colour",
+          "weight": 0.12,
+          "value": 0
+        },
+        {
+          "key": "brand",
+          "label": "Brand",
+          "weight": 0.05,
+          "value": 0
+        }
+      ],
+      "reverse_score": 5
+    },
+    {
+      "a": "L9",
+      "b": "F5",
+      "score": 13,
+      "reasons": [
+        "Similar description: blue",
+        "Similar colour (Navy / Blue)"
+      ],
+      "breakdown": [
+        {
+          "key": "text",
+          "label": "Description",
+          "weight": 0.35,
+          "value": 11
+        },
+        {
+          "key": "category",
+          "label": "Category",
+          "weight": 0.2,
+          "value": 0
+        },
+        {
+          "key": "location",
+          "label": "Location",
+          "weight": 0.15,
+          "value": 0
+        },
+        {
+          "key": "date",
+          "label": "Date",
+          "weight": 0.13,
+          "value": 5
+        },
+        {
+          "key": "color",
+          "label": "Colour",
+          "weight": 0.12,
+          "value": 60
+        },
+        {
+          "key": "brand",
+          "label": "Brand",
+          "weight": 0.05,
+          "value": 0
+        }
+      ],
+      "reverse_score": 13
+    },
+    {
+      "a": "L9",
+      "b": "F6",
+      "score": 93,
+      "reasons": [
+        "Similar description: navy, bag, blue, cover",
+        "Same category: Bags",
+        "Similar colour (Navy / Blue)",
+        "Nearby location: main, gate, bus, stop",
+        "Lost and found on the same day"
+      ],
+      "breakdown": [
+        {
+          "key": "text",
+          "label": "Description",
+          "weight": 0.35,
+          "value": 72
+        },
+        {
+          "key": "category",
+          "label": "Category",
+          "weight": 0.2,
+          "value": 100
+        },
+        {
+          "key": "location",
+          "label": "Location",
+          "weight": 0.15,
+          "value": 100
+        },
+        {
+          "key": "date",
+          "label": "Date",
+          "weight": 0.13,
+          "value": 100
+        },
+        {
+          "key": "color",
+          "label": "Colour",
+          "weight": 0.12,
+          "value": 60
+        },
+        {
+          "key": "brand",
+          "label": "Brand",
+          "weight": 0.05,
+          "value": 0
+        }
+      ],
+      "reverse_score": 93
+    },
+    {
+      "a": "L9",
+      "b": "F7",
+      "score": 1,
+      "reasons": [],
+      "breakdown": [
+        {
+          "key": "text",
+          "label": "Description",
+          "weight": 0.35,
+          "value": 0
+        },
+        {
+          "key": "category",
+          "label": "Category",
+          "weight": 0.2,
+          "value": 0
+        },
+        {
+          "key": "location",
+          "label": "Location",
+          "weight": 0.15,
+          "value": 0
+        },
+        {
+          "key": "date",
+          "label": "Date",
+          "weight": 0.13,
+          "value": 5
+        },
+        {
+          "key": "color",
+          "label": "Colour",
+          "weight": 0.12,
+          "value": 0
+        },
+        {
+          "key": "brand",
+          "label": "Brand",
+          "weight": 0.05,
+          "value": 0
+        }
+      ],
+      "reverse_score": 1
+    },
+    {
+      "a": "L9",
+      "b": "F8",
+      "score": 15,
+      "reasons": [
+        "Lost and found on the same day"
+      ],
+      "breakdown": [
+        {
+          "key": "text",
+          "label": "Description",
+          "weight": 0.35,
+          "value": 0
+        },
+        {
+          "key": "category",
+          "label": "Category",
+          "weight": 0.2,
+          "value": 0
+        },
+        {
+          "key": "location",
+          "label": "Location",
+          "weight": 0.15,
+          "value": 0
+        },
+        {
+          "key": "date",
+          "label": "Date",
+          "weight": 0.13,
+          "value": 100
+        },
+        {
+          "key": "color",
+          "label": "Colour",
+          "weight": 0.12,
+          "value": 0
+        },
+        {
+          "key": "brand",
+          "label": "Brand",
+          "weight": 0.05,
+          "value": 0
+        }
+      ],
+      "reverse_score": 15
+    },
+    {
+      "a": "L9",
+      "b": "F9",
+      "score": 1,
+      "reasons": [],
+      "breakdown": [
+        {
+          "key": "text",
+          "label": "Description",
+          "weight": 0.35,
+          "value": 0
+        },
+        {
+          "key": "category",
+          "label": "Category",
+          "weight": 0.2,
+          "value": 0
+        },
+        {
+          "key": "location",
+          "label": "Location",
+          "weight": 0.15,
+          "value": 0
+        },
+        {
+          "key": "date",
+          "label": "Date",
+          "weight": 0.13,
+          "value": 5
+        },
+        {
+          "key": "color",
+          "label": "Colour",
+          "weight": 0.12,
+          "value": 0
+        },
+        {
+          "key": "brand",
+          "label": "Brand",
+          "weight": 0.05,
+          "value": 0
+        }
+      ],
+      "reverse_score": 1
+    },
+    {
+      "a": "L9",
+      "b": "F10",
+      "score": 17,
+      "reasons": [
+        "Nearby location: gate"
+      ],
+      "breakdown": [
+        {
+          "key": "text",
+          "label": "Description",
+          "weight": 0.35,
+          "value": 0
+        },
+        {
+          "key": "category",
+          "label": "Category",
+          "weight": 0.2,
+          "value": 0
+        },
+        {
+          "key": "location",
+          "label": "Location",
+          "weight": 0.15,
+          "value": 100
+        },
+        {
+          "key": "date",
+          "label": "Date",
+          "weight": 0.13,
+          "value": 0
+        },
+        {
+          "key": "color",
+          "label": "Colour",
+          "weight": 0.12,
+          "value": 0
+        },
+        {
+          "key": "brand",
+          "label": "Brand",
+          "weight": 0.05,
+          "value": 0
+        }
+      ],
+      "reverse_score": 17
+    },
+    {
+      "a": "L9",
+      "b": "F11",
+      "score": 6,
+      "reasons": [
+        "Nearby location: gate"
+      ],
+      "breakdown": [
+        {
+          "key": "text",
+          "label": "Description",
+          "weight": 0.35,
+          "value": 0
+        },
+        {
+          "key": "category",
+          "label": "Category",
+          "weight": 0.2,
+          "value": 0
+        },
+        {
+          "key": "location",
+          "label": "Location",
+          "weight": 0.15,
+          "value": 33
+        },
+        {
+          "key": "date",
+          "label": "Date",
+          "weight": 0.13,
+          "value": 5
+        },
+        {
+          "key": "color",
+          "label": "Colour",
+          "weight": 0.12,
+          "value": 0
+        },
+        {
+          "key": "brand",
+          "label": "Brand",
+          "weight": 0.05,
+          "value": 0
+        }
+      ],
+      "reverse_score": 6
+    },
+    {
+      "a": "L9",
+      "b": "F12",
+      "score": 4,
+      "reasons": [
+        "Similar description: blue, cover"
+      ],
+      "breakdown": [
+        {
+          "key": "text",
+          "label": "Description",
+          "weight": 0.35,
+          "value": 8
+        },
+        {
+          "key": "category",
+          "label": "Category",
+          "weight": 0.2,
+          "value": 0
+        },
+        {
+          "key": "location",
+          "label": "Location",
+          "weight": 0.15,
+          "value": 0
+        },
+        {
+          "key": "date",
+          "label": "Date",
+          "weight": 0.13,
+          "value": 5
+        },
+        {
+          "key": "color",
+          "label": "Colour",
+          "weight": 0.12,
+          "value": 0
+        },
+        {
+          "key": "brand",
+          "label": "Brand",
+          "weight": 0.05,
+          "value": 0
+        }
+      ],
+      "reverse_score": 4
+    },
+    {
+      "a": "L10",
+      "b": "F1",
+      "score": 27,
+      "reasons": [
+        "Nearby location: library",
+        "Found 6 days after it was lost"
+      ],
+      "breakdown": [
+        {
+          "key": "text",
+          "label": "Description",
+          "weight": 0.35,
+          "value": 0
+        },
+        {
+          "key": "category",
+          "label": "Category",
+          "weight": 0.2,
+          "value": 0
+        },
+        {
+          "key": "location",
+          "label": "Location",
+          "weight": 0.15,
+          "value": 50
+        },
+        {
+          "key": "date",
+          "label": "Date",
+          "weight": 0.13,
+          "value": 80
+        },
+        {
+          "key": "color",
+          "label": "Colour",
+          "weight": 0.12,
+          "value": 50
+        },
+        {
+          "key": "brand",
+          "label": "Brand",
+          "weight": 0.05,
+          "value": 0
+        }
+      ],
+      "reverse_score": 27
+    },
+    {
+      "a": "L10",
+      "b": "F2",
+      "score": 20,
+      "reasons": [
+        "Found 4 days after it was lost"
+      ],
+      "breakdown": [
+        {
+          "key": "text",
+          "label": "Description",
+          "weight": 0.35,
+          "value": 0
+        },
+        {
+          "key": "category",
+          "label": "Category",
+          "weight": 0.2,
+          "value": 0
+        },
+        {
+          "key": "location",
+          "label": "Location",
+          "weight": 0.15,
+          "value": 0
+        },
+        {
+          "key": "date",
+          "label": "Date",
+          "weight": 0.13,
+          "value": 87
+        },
+        {
+          "key": "color",
+          "label": "Colour",
+          "weight": 0.12,
+          "value": 50
+        },
+        {
+          "key": "brand",
+          "label": "Brand",
+          "weight": 0.05,
+          "value": 0
+        }
+      ],
+      "reverse_score": 20
+    },
+    {
+      "a": "L10",
+      "b": "F3",
+      "score": 18,
+      "reasons": [
+        "Found 7 days after it was lost"
+      ],
+      "breakdown": [
+        {
+          "key": "text",
+          "label": "Description",
+          "weight": 0.35,
+          "value": 0
+        },
+        {
+          "key": "category",
+          "label": "Category",
+          "weight": 0.2,
+          "value": 0
+        },
+        {
+          "key": "location",
+          "label": "Location",
+          "weight": 0.15,
+          "value": 0
+        },
+        {
+          "key": "date",
+          "label": "Date",
+          "weight": 0.13,
+          "value": 77
+        },
+        {
+          "key": "color",
+          "label": "Colour",
+          "weight": 0.12,
+          "value": 50
+        },
+        {
+          "key": "brand",
+          "label": "Brand",
+          "weight": 0.05,
+          "value": 0
+        }
+      ],
+      "reverse_score": 18
+    },
+    {
+      "a": "L10",
+      "b": "F4",
+      "score": 22,
+      "reasons": [
+        "Lost and found on the same day"
+      ],
+      "breakdown": [
+        {
+          "key": "text",
+          "label": "Description",
+          "weight": 0.35,
+          "value": 0
+        },
+        {
+          "key": "category",
+          "label": "Category",
+          "weight": 0.2,
+          "value": 0
+        },
+        {
+          "key": "location",
+          "label": "Location",
+          "weight": 0.15,
+          "value": 0
+        },
+        {
+          "key": "date",
+          "label": "Date",
+          "weight": 0.13,
+          "value": 100
+        },
+        {
+          "key": "color",
+          "label": "Colour",
+          "weight": 0.12,
+          "value": 50
+        },
+        {
+          "key": "brand",
+          "label": "Brand",
+          "weight": 0.05,
+          "value": 0
+        }
+      ],
+      "reverse_score": 22
+    },
+    {
+      "a": "L10",
+      "b": "F5",
+      "score": 19,
+      "reasons": [
+        "Found 5 days after it was lost"
+      ],
+      "breakdown": [
+        {
+          "key": "text",
+          "label": "Description",
+          "weight": 0.35,
+          "value": 0
+        },
+        {
+          "key": "category",
+          "label": "Category",
+          "weight": 0.2,
+          "value": 0
+        },
+        {
+          "key": "location",
+          "label": "Location",
+          "weight": 0.15,
+          "value": 0
+        },
+        {
+          "key": "date",
+          "label": "Date",
+          "weight": 0.13,
+          "value": 83
+        },
+        {
+          "key": "color",
+          "label": "Colour",
+          "weight": 0.12,
+          "value": 50
+        },
+        {
+          "key": "brand",
+          "label": "Brand",
+          "weight": 0.05,
+          "value": 0
+        }
+      ],
+      "reverse_score": 19
+    },
+    {
+      "a": "L10",
+      "b": "F6",
+      "score": 32,
+      "reasons": [
+        "Similar description: umbrella",
+        "Nearby location: gate",
+        "Found 7 days after it was lost"
+      ],
+      "breakdown": [
+        {
+          "key": "text",
+          "label": "Description",
+          "weight": 0.35,
+          "value": 12
+        },
+        {
+          "key": "category",
+          "label": "Category",
+          "weight": 0.2,
+          "value": 0
+        },
+        {
+          "key": "location",
+          "label": "Location",
+          "weight": 0.15,
+          "value": 50
+        },
+        {
+          "key": "date",
+          "label": "Date",
+          "weight": 0.13,
+          "value": 77
+        },
+        {
+          "key": "color",
+          "label": "Colour",
+          "weight": 0.12,
+          "value": 50
+        },
+        {
+          "key": "brand",
+          "label": "Brand",
+          "weight": 0.05,
+          "value": 0
+        }
+      ],
+      "reverse_score": 32
+    },
+    {
+      "a": "L10",
+      "b": "F7",
+      "score": 21,
+      "reasons": [
+        "Found 2 days after it was lost"
+      ],
+      "breakdown": [
+        {
+          "key": "text",
+          "label": "Description",
+          "weight": 0.35,
+          "value": 0
+        },
+        {
+          "key": "category",
+          "label": "Category",
+          "weight": 0.2,
+          "value": 0
+        },
+        {
+          "key": "location",
+          "label": "Location",
+          "weight": 0.15,
+          "value": 0
+        },
+        {
+          "key": "date",
+          "label": "Date",
+          "weight": 0.13,
+          "value": 93
+        },
+        {
+          "key": "color",
+          "label": "Colour",
+          "weight": 0.12,
+          "value": 50
+        },
+        {
+          "key": "brand",
+          "label": "Brand",
+          "weight": 0.05,
+          "value": 0
+        }
+      ],
+      "reverse_score": 21
+    },
+    {
+      "a": "L10",
+      "b": "F8",
+      "score": 19,
+      "reasons": [
+        "Found 6 days after it was lost"
+      ],
+      "breakdown": [
+        {
+          "key": "text",
+          "label": "Description",
+          "weight": 0.35,
+          "value": 0
+        },
+        {
+          "key": "category",
+          "label": "Category",
+          "weight": 0.2,
+          "value": 0
+        },
+        {
+          "key": "location",
+          "label": "Location",
+          "weight": 0.15,
+          "value": 0
+        },
+        {
+          "key": "date",
+          "label": "Date",
+          "weight": 0.13,
+          "value": 80
+        },
+        {
+          "key": "color",
+          "label": "Colour",
+          "weight": 0.12,
+          "value": 50
+        },
+        {
+          "key": "brand",
+          "label": "Brand",
+          "weight": 0.05,
+          "value": 0
+        }
+      ],
+      "reverse_score": 19
+    },
+    {
+      "a": "L10",
+      "b": "F9",
+      "score": 25,
+      "reasons": [
+        "Nearby location: library"
+      ],
+      "breakdown": [
+        {
+          "key": "text",
+          "label": "Description",
+          "weight": 0.35,
+          "value": 0
+        },
+        {
+          "key": "category",
+          "label": "Category",
+          "weight": 0.2,
+          "value": 0
+        },
+        {
+          "key": "location",
+          "label": "Location",
+          "weight": 0.15,
+          "value": 100
+        },
+        {
+          "key": "date",
+          "label": "Date",
+          "weight": 0.13,
+          "value": 5
+        },
+        {
+          "key": "color",
+          "label": "Colour",
+          "weight": 0.12,
+          "value": 50
+        },
+        {
+          "key": "brand",
+          "label": "Brand",
+          "weight": 0.05,
+          "value": 0
+        }
+      ],
+      "reverse_score": 25
+    },
+    {
+      "a": "L10",
+      "b": "F10",
+      "score": 24,
+      "reasons": [
+        "Nearby location: gate"
+      ],
+      "breakdown": [
+        {
+          "key": "text",
+          "label": "Description",
+          "weight": 0.35,
+          "value": 0
+        },
+        {
+          "key": "category",
+          "label": "Category",
+          "weight": 0.2,
+          "value": 0
+        },
+        {
+          "key": "location",
+          "label": "Location",
+          "weight": 0.15,
+          "value": 100
+        },
+        {
+          "key": "date",
+          "label": "Date",
+          "weight": 0.13,
+          "value": 0
+        },
+        {
+          "key": "color",
+          "label": "Colour",
+          "weight": 0.12,
+          "value": 50
+        },
+        {
+          "key": "brand",
+          "label": "Brand",
+          "weight": 0.05,
+          "value": 0
+        }
+      ],
+      "reverse_score": 24
+    },
+    {
+      "a": "L10",
+      "b": "F11",
+      "score": 92,
+      "reasons": [
+        "Similar description: umbrella, folding",
+        "Same category: Accessories",
+        "Nearby location: library, gate",
+        "Lost and found on the same day"
+      ],
+      "breakdown": [
+        {
+          "key": "text",
+          "label": "Description",
+          "weight": 0.35,
+          "value": 75
+        },
+        {
+          "key": "category",
+          "label": "Category",
+          "weight": 0.2,
+          "value": 100
+        },
+        {
+          "key": "location",
+          "label": "Location",
+          "weight": 0.15,
+          "value": 100
+        },
+        {
+          "key": "date",
+          "label": "Date",
+          "weight": 0.13,
+          "value": 100
+        },
+        {
+          "key": "color",
+          "label": "Colour",
+          "weight": 0.12,
+          "value": 50
+        },
+        {
+          "key": "brand",
+          "label": "Brand",
+          "weight": 0.05,
+          "value": 0
+        }
+      ],
+      "reverse_score": 92
+    },
+    {
+      "a": "L10",
+      "b": "F12",
+      "score": 28,
+      "reasons": [
+        "Nearby location: library",
+        "Found 5 days after it was lost"
+      ],
+      "breakdown": [
+        {
+          "key": "text",
+          "label": "Description",
+          "weight": 0.35,
+          "value": 0
+        },
+        {
+          "key": "category",
+          "label": "Category",
+          "weight": 0.2,
+          "value": 0
+        },
+        {
+          "key": "location",
+          "label": "Location",
+          "weight": 0.15,
+          "value": 50
+        },
+        {
+          "key": "date",
+          "label": "Date",
+          "weight": 0.13,
+          "value": 83
+        },
+        {
+          "key": "color",
+          "label": "Colour",
+          "weight": 0.12,
+          "value": 50
+        },
+        {
+          "key": "brand",
+          "label": "Brand",
+          "weight": 0.05,
+          "value": 0
+        }
+      ],
+      "reverse_score": 28
+    }
+  ],
+  "find_matches": [
+    {
+      "item": "L1",
+      "results": [
+        {
+          "id": "F1",
+          "score": 99
+        },
+        {
+          "id": "F9",
+          "score": 75
+        }
+      ]
+    },
+    {
+      "item": "L2",
+      "results": [
+        {
+          "id": "F2",
+          "score": 87
+        }
+      ]
+    },
+    {
+      "item": "L3",
+      "results": [
+        {
+          "id": "F6",
+          "score": 91
+        },
+        {
+          "id": "F5",
+          "score": 39
+        }
+      ]
+    },
+    {
+      "item": "L4",
+      "results": [
+        {
+          "id": "F12",
+          "score": 53
+        },
+        {
+          "id": "F1",
+          "score": 52
+        },
+        {
+          "id": "F4",
+          "score": 41
+        },
+        {
+          "id": "F9",
+          "score": 39
+        }
+      ]
+    },
+    {
+      "item": "L5",
+      "results": []
+    },
+    {
+      "item": "L6",
+      "results": [
+        {
+          "id": "F4",
+          "score": 89
+        },
+        {
+          "id": "F1",
+          "score": 50
+        }
+      ]
+    },
+    {
+      "item": "L7",
+      "results": [
+        {
+          "id": "F7",
+          "score": 99
+        }
+      ]
+    },
+    {
+      "item": "L8",
+      "results": [
+        {
+          "id": "F10",
+          "score": 83
+        },
+        {
+          "id": "F3",
+          "score": 77
+        }
+      ]
+    },
+    {
+      "item": "L9",
+      "results": [
+        {
+          "id": "F6",
+          "score": 93
+        }
+      ]
+    },
+    {
+      "item": "L10",
+      "results": []
+    },
+    {
+      "item": "F1",
+      "results": [
+        {
+          "id": "L1",
+          "score": 99
+        },
+        {
+          "id": "L4",
+          "score": 52
+        },
+        {
+          "id": "L6",
+          "score": 50
+        }
+      ]
+    },
+    {
+      "item": "F2",
+      "results": [
+        {
+          "id": "L2",
+          "score": 87
+        }
+      ]
+    },
+    {
+      "item": "F3",
+      "results": [
+        {
+          "id": "L8",
+          "score": 77
+        }
+      ]
+    },
+    {
+      "item": "F4",
+      "results": [
+        {
+          "id": "L6",
+          "score": 89
+        },
+        {
+          "id": "L4",
+          "score": 41
+        }
+      ]
+    },
+    {
+      "item": "F5",
+      "results": [
+        {
+          "id": "L3",
+          "score": 39
+        }
+      ]
+    },
+    {
+      "item": "F6",
+      "results": [
+        {
+          "id": "L9",
+          "score": 93
+        },
+        {
+          "id": "L3",
+          "score": 91
+        }
+      ]
+    },
+    {
+      "item": "F7",
+      "results": [
+        {
+          "id": "L7",
+          "score": 99
+        }
+      ]
+    },
+    {
+      "item": "F8",
+      "results": []
+    },
+    {
+      "item": "F9",
+      "results": [
+        {
+          "id": "L1",
+          "score": 75
+        },
+        {
+          "id": "L4",
+          "score": 39
+        }
+      ]
+    },
+    {
+      "item": "F10",
+      "results": [
+        {
+          "id": "L8",
+          "score": 83
+        }
+      ]
+    },
+    {
+      "item": "F11",
+      "results": []
+    },
+    {
+      "item": "F12",
+      "results": [
+        {
+          "id": "L4",
+          "score": 53
+        }
+      ]
+    }
+  ]
+}

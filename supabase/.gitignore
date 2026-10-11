@@ -1,0 +1,3 @@
+# Supabase CLI local state (project link, temp files)
+.branches
+.temp

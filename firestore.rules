@@ -1,0 +1,84 @@
+rules_version = '2';
+service cloud.firestore {
+  match /databases/{database}/documents {
+
+    // Helper functions
+    function isAuthenticated() {
+      return request.auth != null;
+    }
+
+    // ITEMS (Lost and found reports)
+    // - Anyone can view open/all reports to search for their lost or found items.
+    // - Authenticated users can create reports under their own uid.
+    // - Only the reporter can edit or delete their report.
+    match /items/{itemId} {
+      allow read: if true;
+
+      allow create: if isAuthenticated()
+        && request.resource.data.user_id == request.auth.uid
+        && request.resource.data.status in ['open', 'resolved', 'cancelled']
+        && request.resource.data.title is string
+        && request.resource.data.title.size() >= 3
+        && request.resource.data.title.size() <= 120;
+
+      allow update: if isAuthenticated() && (
+        // Report owner can edit details or change status
+        resource.data.user_id == request.auth.uid
+        // OR when an approved claim marks this item resolved by the item owner
+        || (request.resource.data.diff(resource.data).affectedKeys().hasOnly(['status', 'updated_at'])
+            && request.resource.data.status == 'resolved'
+            && resource.data.user_id == request.auth.uid)
+      );
+
+      allow delete: if isAuthenticated() && resource.data.user_id == request.auth.uid;
+    }
+
+    // MATCHES (Suggested matches)
+    // - Potential matches are public suggestions (same as database matches table).
+    // - Authenticated users can write matches when refreshing matches for their own reports.
+    match /matches/{matchId} {
+      allow read: if true;
+      allow create, update, delete: if isAuthenticated();
+    }
+
+    // CLAIMS (Ownership claims with proof)
+    // - Only the claimant (outgoing) or the item owner (incoming) can read a claim.
+    // - Authenticated user can create a claim on an item they do not own.
+    // - Only the item owner can respond to (approve/reject) the claim.
+    match /claims/{claimId} {
+      allow read: if isAuthenticated() && (
+        resource.data.claimant_id == request.auth.uid
+        || resource.data.owner_id == request.auth.uid
+      );
+
+      allow create: if isAuthenticated()
+        && request.resource.data.claimant_id == request.auth.uid
+        && request.resource.data.owner_id != request.auth.uid
+        && request.resource.data.status == 'pending'
+        && request.resource.data.message is string
+        && request.resource.data.message.size() >= 10;
+
+      allow update: if isAuthenticated() && (
+        // Item owner can approve or reject
+        resource.data.owner_id == request.auth.uid
+        // Claimant can cancel a pending claim
+        || (resource.data.claimant_id == request.auth.uid && request.resource.data.status == 'cancelled')
+      );
+
+      allow delete: if isAuthenticated() && (
+        (resource.data.claimant_id == request.auth.uid && resource.data.status == 'pending')
+        || resource.data.owner_id == request.auth.uid
+      );
+    }
+
+    // NOTIFICATIONS
+    // - In-app notifications are private to the recipient user.
+    // - Authenticated users can create notifications for another user (e.g. claim received, match found).
+    // - Users can read and update (mark read) only their own notifications.
+    match /notifications/{notificationId} {
+      allow read: if isAuthenticated() && resource.data.user_id == request.auth.uid;
+      allow create: if isAuthenticated();
+      allow update, delete: if isAuthenticated() && resource.data.user_id == request.auth.uid;
+    }
+  }
+}

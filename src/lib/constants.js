@@ -1,0 +1,46 @@
+export const CATEGORIES = [
+  'Electronics',
+  'Wallets & Purses',
+  'Bags',
+  'Keys',
+  'ID & Cards',
+  'Documents',
+  'Clothing',
+  'Accessories',
+  'Jewelry',
+  'Water Bottles',
+  'Books & Stationery',
+  'Other',
+]
+
+export const COLORS = [
+  'Black',
+  'White',
+  'Gray',
+  'Silver',
+  'Blue',
+  'Red',
+  'Green',
+  'Yellow',
+  'Orange',
+  'Pink',
+  'Purple',
+  'Brown',
+  'Gold',
+  'Multicolor',
+]
+
+export const CATEGORY_EMOJI = {
+  Electronics: '📱',
+  'Wallets & Purses': '👛',
+  Bags: '🎒',
+  Keys: '🔑',
+  'ID & Cards': '🪪',
+  Documents: '📄',
+  Clothing: '🧥',
+  Accessories: '⌚',
+  Jewelry: '💍',
+  'Water Bottles': '🧴',
+  'Books & Stationery': '📚',
+  Other: '📦',
+}

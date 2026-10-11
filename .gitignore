@@ -1,0 +1,16 @@
+node_modules
+dist
+.env
+.env.local
+.DS_Store
+*.log
+# Python
+__pycache__/
+*.pyc
+.venv/
+backend/.env
+.pytest_cache/
+*serviceAccountKey*.json
+*.pem
+*.key
+

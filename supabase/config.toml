@@ -1,0 +1,5 @@
+# Supabase CLI configuration for FindBack.
+# Only used by the Supabase CLI (npx supabase ...). The CLI fills in defaults for
+# everything not listed here. Your hosted project's settings are NOT changed by this file
+# unless you explicitly run `supabase config push` (FindBack's setup never does).
+project_id = "findback"
