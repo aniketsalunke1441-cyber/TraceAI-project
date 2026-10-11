@@ -7,7 +7,9 @@ dist
 # Python
 __pycache__/
 *.pyc
+.venv
 .venv/
+backend/.venv
 backend/.env
 .pytest_cache/
 *serviceAccountKey*.json
