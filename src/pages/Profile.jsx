@@ -9,7 +9,7 @@ import { ErrorBox, Spinner } from '../components/ui'
 
 export default function Profile() {
   const { user, updateProfile, signOut } = useAuth()
-  const { pushToast } = useToast()
+  const toast = useToast()
   const navigate = useNavigate()
 
   const [name, setName] = useState(user?.name || '')
@@ -54,7 +54,7 @@ export default function Profile() {
     setError('')
     try {
       await updateProfile({ name: trimmed })
-      pushToast('Profile name updated successfully!', 'success')
+      toast.success('Profile name updated successfully!')
     } catch (err) {
       setError(err.message || 'Could not update profile name.')
     } finally {

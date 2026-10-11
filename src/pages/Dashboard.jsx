@@ -32,18 +32,19 @@ export default function Dashboard() {
   const [error, setError] = useState('')
 
   useEffect(() => {
+    if (!user?.id) return
     Promise.all([listItems(), listClaimsForUser(user.id)])
       .then(async ([items, claims]) => {
-        const mine = items.filter((i) => i.user_id === user.id)
+        const mine = (items || []).filter((i) => i.user_id === user.id)
         const open = mine.filter((i) => i.status === 'open')
         // potential matches saved in the database for each of my open reports
         const saved = await getMatchesForItems(open, 3)
         const matches = open.map((i) => ({ item: i, matches: saved.get(i.id) || [] })).filter((m) => m.matches.length > 0)
-        const recent = items.filter((i) => i.user_id !== user.id && i.status === 'open').slice(0, 4)
-        setData({ mine, matches, claims, recent })
+        const recent = (items || []).filter((i) => i.user_id !== user.id && i.status === 'open').slice(0, 4)
+        setData({ mine, matches, claims: claims || { incoming: [], outgoing: [] }, recent })
       })
       .catch((err) => setError(err.message))
-  }, [user.id])
+  }, [user?.id])
 
   if (error) return <div className="container-page py-10"><ErrorBox message={error} /></div>
   if (!data) return <Spinner label="Loading your dashboard…" />

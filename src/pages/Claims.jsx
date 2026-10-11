@@ -11,10 +11,11 @@ export default function Claims() {
   const [error, setError] = useState('')
 
   const load = useCallback(() => {
+    if (!user?.id) return
     listClaimsForUser(user.id)
       .then(setClaims)
       .catch((err) => setError(err.message))
-  }, [user.id])
+  }, [user?.id])
 
   useEffect(() => {
     load()

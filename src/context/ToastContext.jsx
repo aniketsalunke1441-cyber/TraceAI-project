@@ -20,7 +20,12 @@ export function ToastProvider({ children }) {
   )
 
   const api = useMemo(
-    () => ({ success: (m) => show('success', m), error: (m) => show('error', m), info: (m) => show('info', m) }),
+    () => ({
+      success: (m) => show('success', m),
+      error: (m) => show('error', m),
+      info: (m) => show('info', m),
+      pushToast: (m, type = 'info') => show(type, m),
+    }),
     [show],
   )
 

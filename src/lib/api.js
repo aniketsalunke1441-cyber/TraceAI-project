@@ -319,8 +319,12 @@ export async function signOut() {
   if (activeBackend === 'firebase') {
     return fbApi.firebaseSignOut()
   }
-  const { error } = await supabase.auth.signOut()
-  if (error) throw appError(error)
+  try {
+    const { error } = await supabase.auth.signOut()
+    if (error) console.warn('Supabase signOut warning:', error.message)
+  } catch (err) {
+    console.warn('Supabase signOut notice:', err?.message)
+  }
 }
 
 
@@ -762,7 +766,10 @@ export async function getMatchesForItems(items, limitEach = 6) {
       supabase.from('matches').select('*').in('lost_item_id', ids),
       supabase.from('matches').select('*').in('found_item_id', ids),
     ])
-    if (a.error || b.error) throw appError(a.error || b.error, 'Could not load matches.')
+    if (a.error || b.error) {
+      console.warn('Could not load matches from Supabase:', (a.error || b.error)?.message)
+      return new Map(items.map((i) => [i.id, []]))
+    }
     const seen = new Set()
     rows = [...a.data, ...b.data].filter((r) => (seen.has(r.id) ? false : seen.add(r.id)))
     const otherIds = [...new Set(rows.flatMap((r) => [r.lost_item_id, r.found_item_id]))].filter((id) => !ids.includes(id))
@@ -831,6 +838,7 @@ export async function createClaim({ item, user, message, contact }) {
 
 /** Claims where the user is the claimant (outgoing) or the item owner (incoming). */
 export async function listClaimsForUser(userId) {
+  if (!userId) return { incoming: [], outgoing: [] }
   let claims
   let items
   if (isDemoMode) {
@@ -843,13 +851,20 @@ export async function listClaimsForUser(userId) {
   } else {
     // RLS only returns claims where this user is the claimant or the item owner.
     const { data, error } = await supabase.from('claims').select('*').order('created_at', { ascending: false })
-    if (error) throw appError(error, 'Could not load claims.')
-    claims = data
+    if (error) {
+      console.warn('Could not load claims from Supabase:', error.message)
+      return { incoming: [], outgoing: [] }
+    }
+    claims = data || []
     const ids = [...new Set(claims.map((c) => c.item_id))]
     if (ids.length) {
       const res = await supabase.from('items').select('*').in('id', ids)
-      if (res.error) throw appError(res.error, 'Could not load claims.')
-      items = res.data
+      if (res.error) {
+        console.warn('Could not load items for claims:', res.error.message)
+        items = []
+      } else {
+        items = res.data || []
+      }
     } else items = []
   }
   const withItem = claims

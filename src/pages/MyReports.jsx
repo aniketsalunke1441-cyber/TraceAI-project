@@ -21,15 +21,16 @@ export default function MyReports() {
   const [error, setError] = useState('')
 
   useEffect(() => {
+    if (!user?.id) return
     Promise.all([listMyItems(user.id), listClaimsForUser(user.id)])
       .then(([mine, claims]) => {
-        setItems(mine.sort((a, b) => new Date(b.created_at) - new Date(a.created_at)))
+        setItems((mine || []).sort((a, b) => new Date(b.created_at) - new Date(a.created_at)))
         const counts = {}
-        for (const c of claims.incoming) if (c.status === 'pending') counts[c.item_id] = (counts[c.item_id] || 0) + 1
+        for (const c of claims?.incoming || []) if (c.status === 'pending') counts[c.item_id] = (counts[c.item_id] || 0) + 1
         setClaimCounts(counts)
       })
       .catch((err) => setError(err.message))
-  }, [user.id])
+  }, [user?.id])
 
   const visible = items ? items.filter((i) => tab === 'all' || i.type === tab) : []
 
