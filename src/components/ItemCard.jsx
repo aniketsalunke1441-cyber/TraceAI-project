@@ -5,6 +5,7 @@ import { formatDate, timeAgo } from '../lib/utils'
 import { matchLabel } from '../lib/matching'
 
 export default function ItemCard({ item }) {
+  if (!item) return null
   return (
     <Link
       to={`/items/${item.id}`}
@@ -38,7 +39,8 @@ export default function ItemCard({ item }) {
 
 /** One AI match result row. */
 export function MatchCard({ match, detailed = false }) {
-  const { item, score, reasons, breakdown = [] } = match
+  if (!match || !match.item) return null
+  const { item, score = 0, reasons = [], breakdown = [] } = match
   const { label } = matchLabel(score)
   return (
     <Link

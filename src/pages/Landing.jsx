@@ -37,15 +37,21 @@ export default function Landing() {
   const [stats, setStats] = useState({ lost: 0, found: 0, resolved: 0 })
 
   useEffect(() => {
+    let active = true
     listItems()
-      .then((items) =>
+      .then((items) => {
+        if (!active) return
+        const list = Array.isArray(items) ? items : []
         setStats({
-          lost: items.filter((i) => i.type === 'lost').length,
-          found: items.filter((i) => i.type === 'found').length,
-          resolved: items.filter((i) => i.status === 'resolved').length,
-        }),
-      )
+          lost: list.filter((i) => i.type === 'lost').length,
+          found: list.filter((i) => i.type === 'found').length,
+          resolved: list.filter((i) => i.status === 'resolved').length,
+        })
+      })
       .catch(() => {})
+    return () => {
+      active = false
+    }
   }, [])
 
   return (

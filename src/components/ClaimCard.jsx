@@ -21,6 +21,7 @@ export default function ClaimCard({ claim, role, showItem = false, onChange }) {
   const [error, setError] = useState('')
 
   async function submit() {
+    if (busy) return
     if (mode === 'approved' && note.trim().length < 5) {
       setError('Add pickup details so the owner knows where to collect the item.')
       return
@@ -92,10 +93,10 @@ export default function ClaimCard({ claim, role, showItem = false, onChange }) {
         <div className="mt-4">
           {!mode ? (
             <div className="flex flex-wrap gap-2">
-              <button className="btn-found" onClick={() => setMode('approved')}>
+              <button type="button" className="btn-found" onClick={() => setMode('approved')}>
                 <Icon name="check" className="h-4 w-4" /> Approve
               </button>
-              <button className="btn-danger" onClick={() => setMode('rejected')}>
+              <button type="button" className="btn-danger" onClick={() => setMode('rejected')}>
                 <Icon name="x" className="h-4 w-4" /> Reject
               </button>
             </div>
@@ -120,10 +121,10 @@ export default function ClaimCard({ claim, role, showItem = false, onChange }) {
               />
               <ErrorBox message={error} />
               <div className="flex flex-wrap gap-2">
-                <button className={mode === 'approved' ? 'btn-found' : 'btn-lost'} onClick={submit} disabled={busy}>
+                <button type="button" className={mode === 'approved' ? 'btn-found' : 'btn-lost'} onClick={submit} disabled={busy}>
                   {busy ? 'Saving…' : mode === 'approved' ? 'Confirm approval' : 'Confirm rejection'}
                 </button>
-                <button className="btn-secondary" onClick={() => setMode(null)} disabled={busy}>
+                <button type="button" className="btn-secondary" onClick={() => setMode(null)} disabled={busy}>
                   Cancel
                 </button>
               </div>

@@ -33,24 +33,34 @@ export default function Dashboard() {
 
   useEffect(() => {
     if (!user?.id) return
+    let active = true
     Promise.all([listItems(), listClaimsForUser(user.id)])
       .then(async ([items, claims]) => {
+        if (!active) return
         const mine = (items || []).filter((i) => i.user_id === user.id)
         const open = mine.filter((i) => i.status === 'open')
         // potential matches saved in the database for each of my open reports
         const saved = await getMatchesForItems(open, 3)
-        const matches = open.map((i) => ({ item: i, matches: saved.get(i.id) || [] })).filter((m) => m.matches.length > 0)
+        if (!active) return
+        const matches = open
+          .map((i) => ({ item: i, matches: (saved instanceof Map ? saved.get(i.id) : []) || [] }))
+          .filter((m) => m.matches.length > 0)
         const recent = (items || []).filter((i) => i.user_id !== user.id && i.status === 'open').slice(0, 4)
         setData({ mine, matches, claims: claims || { incoming: [], outgoing: [] }, recent })
       })
-      .catch((err) => setError(err.message))
+      .catch((err) => {
+        if (active) setError(err.message)
+      })
+    return () => {
+      active = false
+    }
   }, [user?.id])
 
   if (error) return <div className="container-page py-10"><ErrorBox message={error} /></div>
   if (!data) return <Spinner label="Loading your dashboard…" />
 
-  const { mine, matches, claims, recent } = data
-  const pendingIncoming = claims.incoming.filter((c) => c.status === 'pending').length
+  const { mine = [], matches = [], claims = { incoming: [], outgoing: [] }, recent = [] } = data
+  const pendingIncoming = (claims?.incoming || []).filter((c) => c.status === 'pending').length
   const firstName = (user?.name || '').trim().split(' ')[0] || 'there'
 
   return (

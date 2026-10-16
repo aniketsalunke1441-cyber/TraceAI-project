@@ -63,15 +63,19 @@ export default function Navbar() {
 
   // Refresh the "claims waiting for you" badge whenever the page changes.
   useEffect(() => {
-    if (!user) return
+    if (!user?.id) return
     let active = true
     listClaimsForUser(user.id)
-      .then(({ incoming }) => active && setPendingClaims(incoming.filter((c) => c.status === 'pending').length))
+      .then((res) => {
+        if (!active) return
+        const incoming = Array.isArray(res?.incoming) ? res.incoming : []
+        setPendingClaims(incoming.filter((c) => c.status === 'pending').length)
+      })
       .catch(() => {})
     return () => {
       active = false
     }
-  }, [user, pathname])
+  }, [user?.id, pathname])
   const badge = user ? pendingClaims : 0
 
   const links = user
@@ -86,8 +90,12 @@ export default function Navbar() {
   async function handleLogout() {
     setProfileDropdownOpen(false)
     setOpen(false)
-    await signOut()
-    navigate('/')
+    try {
+      navigate('/', { replace: true })
+      await signOut()
+    } catch (err) {
+      console.warn('Logout notice:', err?.message)
+    }
   }
 
   return (
@@ -238,6 +246,7 @@ export default function Navbar() {
 
           {user && <NotificationBell user={user} />}
           <button
+            type="button"
             className="btn-ghost relative px-2 md:hidden"
             onClick={() => setOpen((o) => !o)}
             aria-label="Toggle menu"
@@ -293,7 +302,7 @@ export default function Navbar() {
                     Report Found
                   </Link>
                 </div>
-                <button onClick={handleLogout} className="btn-secondary mt-2">
+                <button type="button" onClick={handleLogout} className="btn-secondary mt-2">
                   <Icon name="logout" className="h-4 w-4" /> Log out
                 </button>
               </>

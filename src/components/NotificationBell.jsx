@@ -13,36 +13,44 @@ export default function NotificationBell({ user }) {
   const box = useRef(null)
 
   useEffect(() => {
+    if (!user?.id) return
     let active = true
     listNotifications(user)
       .then((list) => {
         if (active) {
-          setItems(list)
+          setItems(Array.isArray(list) ? list : [])
           setError('')
         }
       })
-      .catch((err) => active && setError(err.message))
+      .catch((err) => {
+        if (active) setError(err?.message || 'Could not load notifications.')
+      })
     return () => {
       active = false
     }
-  }, [user, pathname])
+  }, [user?.id, pathname])
 
   useEffect(() => setOpen(false), [pathname])
 
   // close when clicking outside
   useEffect(() => {
     if (!open) return
-    const onClick = (e) => box.current && !box.current.contains(e.target) && setOpen(false)
+    const onClick = (e) => {
+      if (box.current && !box.current.contains(e.target)) {
+        setOpen(false)
+      }
+    }
     document.addEventListener('mousedown', onClick)
     return () => document.removeEventListener('mousedown', onClick)
   }, [open])
 
-  const unread = items.filter((n) => !n.read_at).length
+  const safeItems = Array.isArray(items) ? items : []
+  const unread = safeItems.filter((n) => !n.read_at).length
 
   async function markAll() {
     try {
       await markNotificationsRead(user)
-      setItems((list) => list.map((n) => ({ ...n, read_at: n.read_at || new Date().toISOString() })))
+      setItems((list) => (list || []).map((n) => ({ ...n, read_at: n.read_at || new Date().toISOString() })))
     } catch (err) {
       setError(err.message)
     }
@@ -51,6 +59,7 @@ export default function NotificationBell({ user }) {
   return (
     <div className="relative" ref={box}>
       <button
+        type="button"
         className="btn-ghost relative px-2 py-2"
         onClick={() => setOpen((o) => !o)}
         aria-label={`Notifications${unread ? ` (${unread} unread)` : ''}`}
@@ -68,19 +77,22 @@ export default function NotificationBell({ user }) {
           <div className="flex items-center justify-between border-b border-slate-100 px-4 py-3">
             <p className="text-sm font-bold text-slate-900">Notifications</p>
             {unread > 0 && (
-              <button onClick={markAll} className="text-xs font-semibold text-indigo-600 hover:underline">
+              <button type="button" onClick={markAll} className="text-xs font-semibold text-indigo-600 hover:underline">
                 Mark all read
               </button>
             )}
           </div>
           {error && <p className="px-4 py-3 text-sm text-rose-600">{error}</p>}
-          {!error && items.length === 0 && <p className="px-4 py-6 text-center text-sm text-slate-500">No notifications yet.</p>}
+          {!error && safeItems.length === 0 && <p className="px-4 py-6 text-center text-sm text-slate-500">No notifications yet.</p>}
           <ul className="max-h-96 divide-y divide-slate-100 overflow-y-auto">
-            {items.map((n) => (
+            {safeItems.map((n) => (
               <li key={n.id}>
                 <Link
                   to={n.link || '/dashboard'}
-                  onClick={() => !n.read_at && markNotificationsRead(user, [n.id]).catch(() => {})}
+                  onClick={() => {
+                    setOpen(false)
+                    if (!n.read_at) markNotificationsRead(user, [n.id]).catch(() => {})
+                  }}
                   className={`flex gap-3 px-4 py-3 text-sm hover:bg-slate-50 ${n.read_at ? '' : 'bg-indigo-50/50'}`}
                 >
                   <span className={`mt-1.5 h-2 w-2 shrink-0 rounded-full ${n.read_at ? 'bg-transparent' : 'bg-indigo-600'}`} />

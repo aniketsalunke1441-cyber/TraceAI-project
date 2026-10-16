@@ -34,6 +34,7 @@ function ClaimForm({ item, user, onDone }) {
 
   async function handleSubmit(e) {
     e.preventDefault()
+    if (busy) return
     if (message.trim().length < 15) return setError('Please describe it in more detail (at least 15 characters).')
     if (contact.trim().length < 5) return setError('Please add a phone number or email.')
     setBusy(true)
@@ -111,8 +112,8 @@ export default function ItemDetails() {
         await refreshMatches(found, user).catch((e) => console.warn('Match refresh failed', e))
       const [m, c] = await Promise.all([getMatches(found), listClaimsForItem(id, user)])
       if (!isLatest()) return
-      setMatches(m)
-      setClaims(c)
+      setMatches(Array.isArray(m) ? m : [])
+      setClaims(Array.isArray(c) ? c : [])
     } catch (err) {
       if (isLatest()) setError(err.message)
     }
@@ -136,11 +137,12 @@ export default function ItemDetails() {
       </div>
     )
 
+  const safeClaims = Array.isArray(claims) ? claims : []
   const isOwner = user?.id === item.user_id
-  const myClaim = user ? claims.find((c) => c.claimant_id === user.id && c.status !== 'rejected') || claims.find((c) => c.claimant_id === user.id) : null
-  const ownerClaims = isOwner ? claims : []
+  const myClaim = user ? safeClaims.find((c) => c.claimant_id === user.id && c.status !== 'rejected') || safeClaims.find((c) => c.claimant_id === user.id) : null
+  const ownerClaims = isOwner ? safeClaims : []
 
-  const approvedClaim = claims.find((c) => c.status === 'approved')
+  const approvedClaim = safeClaims.find((c) => c.status === 'approved')
 
   async function recalculate() {
     setRecalculating(true)
@@ -240,11 +242,11 @@ export default function ItemDetails() {
                   <Link to={`/items/${item.id}/edit`} className="btn-secondary">
                     <Icon name="edit" className="h-4 w-4" /> Edit
                   </Link>
-                  <button className="btn-secondary" onClick={toggleStatus} disabled={busy}>
+                  <button type="button" className="btn-secondary" onClick={toggleStatus} disabled={busy}>
                     <Icon name={item.status === 'open' ? 'check' : 'refresh'} className="h-4 w-4" />
                     {item.status === 'open' ? 'Mark as returned' : 'Re-open report'}
                   </button>
-                  <button className="btn-danger" onClick={handleDelete} disabled={busy}>
+                  <button type="button" className="btn-danger" onClick={handleDelete} disabled={busy}>
                     <Icon name="trash" className="h-4 w-4" /> Delete
                   </button>
                 </div>
@@ -311,7 +313,7 @@ export default function ItemDetails() {
             <h2 className="text-xl font-extrabold tracking-tight text-slate-900">Potential matches</h2>
           </div>
           {isOwner && item.status === 'open' && (
-            <button className="btn-secondary px-3 py-2" onClick={recalculate} disabled={recalculating}>
+            <button type="button" className="btn-secondary px-3 py-2" onClick={recalculate} disabled={recalculating}>
               <Icon name="refresh" className="h-4 w-4" /> {recalculating ? 'Recalculating…' : 'Recalculate'}
             </button>
           )}

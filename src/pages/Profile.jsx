@@ -28,7 +28,7 @@ export default function Profile() {
     Promise.all([listItems(), listClaimsForUser(user.id)])
       .then(([items, claimsData]) => {
         if (!active) return
-        const mine = items.filter((i) => i.user_id === user.id)
+        const mine = (items || []).filter((i) => i.user_id === user.id)
         const lost = mine.filter((i) => i.type === 'lost').length
         const found = mine.filter((i) => i.type === 'found').length
         const totalClaims = (claimsData?.outgoing?.length || 0) + (claimsData?.incoming?.length || 0)
@@ -45,6 +45,7 @@ export default function Profile() {
 
   async function handleUpdateName(e) {
     e.preventDefault()
+    if (saving) return
     const trimmed = name.trim()
     if (!trimmed) {
       setError('Name cannot be empty.')
@@ -63,8 +64,12 @@ export default function Profile() {
   }
 
   async function handleLogout() {
-    await signOut()
-    navigate('/')
+    try {
+      navigate('/', { replace: true })
+      await signOut()
+    } catch (err) {
+      console.warn('Logout notice:', err?.message)
+    }
   }
 
   if (!user) {
@@ -212,6 +217,7 @@ export default function Profile() {
               Sign out from this device to protect your account.
             </p>
             <button
+              type="button"
               onClick={handleLogout}
               className="btn-danger mt-4 w-full justify-center"
             >

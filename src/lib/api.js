@@ -226,9 +226,18 @@ export async function getCurrentUser() {
   if (activeBackend === 'firebase') {
     return fbApi.getCurrentFirebaseUser()
   }
-  const { data, error } = await supabase.auth.getSession()
-  if (error) throw appError(error)
-  return mapSupabaseUser(data.session?.user)
+  if (!supabase) return null
+  try {
+    const { data, error } = await supabase.auth.getSession()
+    if (error) {
+      console.warn('Supabase getSession notice:', error.message)
+      return null
+    }
+    return mapSupabaseUser(data?.session?.user)
+  } catch (err) {
+    console.warn('Supabase getSession error:', err?.message)
+    return null
+  }
 }
 
 /** Subscribe to login/logout/token-refresh changes. Returns an unsubscribe fn. */
@@ -237,8 +246,14 @@ export function onAuthChange(callback) {
   if (activeBackend === 'firebase') {
     return fbApi.onFirebaseAuthStateChange(callback)
   }
-  const { data } = supabase.auth.onAuthStateChange((_event, session) => callback(mapSupabaseUser(session?.user)))
-  return () => data.subscription.unsubscribe()
+  if (!supabase) return () => {}
+  try {
+    const { data } = supabase.auth.onAuthStateChange((_event, session) => callback(mapSupabaseUser(session?.user)))
+    return () => data?.subscription?.unsubscribe?.()
+  } catch (err) {
+    console.warn('Supabase onAuthStateChange error:', err?.message)
+    return () => {}
+  }
 }
 
 export async function signUp({ name, email, password }) {
@@ -358,12 +373,13 @@ async function removeImage(path) {
 export async function listItems() {
   if (isDemoMode) {
     await wait()
-    return demoDb().items
+    return demoDb().items || []
   }
-  if (activeBackend === 'firebase') return fbApi.listFirebaseItems()
+  if (activeBackend === 'firebase') return (await fbApi.listFirebaseItems()) || []
+  if (!supabase) return []
   const { data, error } = await supabase.from('items').select('*').order('created_at', { ascending: false }).limit(500)
   if (error) throw appError(error, 'Could not load reports.')
-  return data
+  return data || []
 }
 
 export async function getItem(id) {
@@ -373,24 +389,27 @@ export async function getItem(id) {
   }
   if (activeBackend === 'firebase') return fbApi.getFirebaseItem(id)
   if (!/^[0-9a-f-]{36}$/i.test(id)) return null // not a valid id -> "not found" instead of a DB error
+  if (!supabase) return null
   const { data, error } = await supabase.from('items').select('*').eq('id', id).maybeSingle()
   if (error) throw appError(error, 'Could not load this report.')
-  return data
+  return data || null
 }
 
 export async function listMyItems(userId) {
+  if (!userId) return []
   if (isDemoMode) {
     await wait()
-    return demoDb().items.filter((i) => i.user_id === userId)
+    return (demoDb().items || []).filter((i) => i.user_id === userId)
   }
-  if (activeBackend === 'firebase') return fbApi.listMyFirebaseItems(userId)
+  if (activeBackend === 'firebase') return (await fbApi.listMyFirebaseItems(userId)) || []
+  if (!supabase) return []
   const { data, error } = await supabase
     .from('items')
     .select('*')
     .eq('user_id', userId)
     .order('created_at', { ascending: false })
   if (error) throw appError(error, 'Could not load your reports.')
-  return data
+  return data || []
 }
 
 const ITEM_FIELDS = ['type', 'title', 'description', 'category', 'color', 'brand', 'location', 'date']
@@ -729,13 +748,16 @@ export async function refreshMatches(item, user) {
 }
 
 /** Turn stored match rows into [{ item: otherItem, score, reasons, breakdown }] for each of `items`. */
-function attachMatches(rows, items, others) {
-  const byItem = new Map(items.map((i) => [i.id, []]))
-  for (const r of rows) {
-    for (const mine of items) {
+function attachMatches(rows = [], items = [], others = []) {
+  const safeItems = Array.isArray(items) ? items : []
+  const safeRows = Array.isArray(rows) ? rows : []
+  const safeOthers = Array.isArray(others) ? others : []
+  const byItem = new Map(safeItems.map((i) => [i.id, []]))
+  for (const r of safeRows) {
+    for (const mine of safeItems) {
       const otherId = r.lost_item_id === mine.id ? r.found_item_id : r.found_item_id === mine.id ? r.lost_item_id : null
       if (!otherId) continue
-      const other = others.find((o) => o.id === otherId)
+      const other = safeOthers.find((o) => o.id === otherId)
       if (!other || other.status !== 'open') continue
       byItem.get(mine.id).push({
         id: r.id,
@@ -752,8 +774,8 @@ function attachMatches(rows, items, others) {
 }
 
 /** Saved potential matches for several reports at once. Returns Map(itemId -> matches[]). */
-export async function getMatchesForItems(items, limitEach = 6) {
-  if (!items.length) return new Map()
+export async function getMatchesForItems(items = [], limitEach = 6) {
+  if (!Array.isArray(items) || !items.length) return new Map()
   if (activeBackend === 'firebase') {
     return fbApi.getFirebaseMatchesForItems(items, limitEach)
   }
@@ -766,6 +788,7 @@ export async function getMatchesForItems(items, limitEach = 6) {
     rows = db.matches.filter((m) => ids.includes(m.lost_item_id) || ids.includes(m.found_item_id))
     others = db.items
   } else {
+    if (!supabase) return new Map(items.map((i) => [i.id, []]))
     const [a, b] = await Promise.all([
       supabase.from('matches').select('*').in('lost_item_id', ids),
       supabase.from('matches').select('*').in('found_item_id', ids),
@@ -775,13 +798,17 @@ export async function getMatchesForItems(items, limitEach = 6) {
       return new Map(items.map((i) => [i.id, []]))
     }
     const seen = new Set()
-    rows = [...a.data, ...b.data].filter((r) => (seen.has(r.id) ? false : seen.add(r.id)))
+    rows = [...(a.data || []), ...(b.data || [])].filter((r) => (seen.has(r.id) ? false : seen.add(r.id)))
     const otherIds = [...new Set(rows.flatMap((r) => [r.lost_item_id, r.found_item_id]))].filter((id) => !ids.includes(id))
     others = []
     if (otherIds.length) {
       const res = await supabase.from('items').select('*').in('id', otherIds)
-      if (res.error) throw appError(res.error, 'Could not load matches.')
-      others = res.data
+      if (res.error) {
+        console.warn('Could not load matched items from Supabase:', res.error.message)
+        others = []
+      } else {
+        others = res.data || []
+      }
     }
   }
   const map = attachMatches(rows, items, others)
@@ -882,23 +909,24 @@ export async function listClaimsForUser(userId) {
 
 /** Claims on one item that `user` may see: all of them for the owner, only their own for anyone else. */
 export async function listClaimsForItem(itemId, user) {
-  if (!user) return []
+  if (!user || !itemId) return []
   if (isDemoMode) {
     await wait()
-    return demoDb()
-      .claims.filter((c) => c.item_id === itemId && (c.owner_id === user.id || c.claimant_id === user.id))
+    return (demoDb().claims || [])
+      .filter((c) => c.item_id === itemId && (c.owner_id === user.id || c.claimant_id === user.id))
       .sort((a, b) => new Date(b.created_at) - new Date(a.created_at))
   }
   if (activeBackend === 'firebase') {
-    return fbApi.listFirebaseClaimsForItem(itemId, user)
+    return (await fbApi.listFirebaseClaimsForItem(itemId, user)) || []
   }
+  if (!supabase) return []
   const { data, error } = await supabase
     .from('claims')
     .select('*')
     .eq('item_id', itemId)
     .order('created_at', { ascending: false })
   if (error) throw appError(error, 'Could not load claims.')
-  return data
+  return data || []
 }
 
 /**
@@ -955,7 +983,7 @@ export async function respondToClaim(claim, status, responseNote = '', user) {
 /*  NOTIFICATIONS                                                      */
 /* ------------------------------------------------------------------ */
 export async function listNotifications(user, limit = 30) {
-  if (!user) return []
+  if (!user?.id) return []
   if (isDemoMode) {
     demoDb()
     return load(KEYS.notifications, () => [])
@@ -964,8 +992,9 @@ export async function listNotifications(user, limit = 30) {
       .slice(0, limit)
   }
   if (activeBackend === 'firebase') {
-    return fbApi.listFirebaseNotifications(user, limit)
+    return (await fbApi.listFirebaseNotifications(user, limit)) || []
   }
+  if (!supabase) return []
   const { data, error } = await supabase
     .from('notifications')
     .select('*')
@@ -973,7 +1002,7 @@ export async function listNotifications(user, limit = 30) {
     .order('created_at', { ascending: false })
     .limit(limit)
   if (error) throw appError(error, 'Could not load notifications.')
-  return data
+  return data || []
 }
 
 export async function markNotificationsRead(user, ids = null) {

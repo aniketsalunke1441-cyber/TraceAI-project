@@ -1,4 +1,5 @@
 import { Link, useNavigate } from 'react-router-dom'
+import { useAuth } from '../context/AuthContext'
 import Icon from './Icon'
 import { CATEGORY_EMOJI } from '../lib/constants'
 import { matchLabel } from '../lib/matching'
@@ -56,8 +57,15 @@ export function EmptyState({ icon = 'inbox', title, text, action }) {
 }
 
 export function ItemImage({ item, className = '', emojiSize = 'text-5xl' }) {
+  if (!item) {
+    return (
+      <div className={`grid place-items-center bg-slate-100 ${className}`} aria-label="No photo">
+        <span className={`${emojiSize} drop-shadow-sm`}>📦</span>
+      </div>
+    )
+  }
   if (item.image_url) {
-    return <img src={item.image_url} alt={item.title} className={`object-cover ${className}`} loading="lazy" />
+    return <img src={item.image_url} alt={item.title || 'Item photo'} className={`object-cover ${className}`} loading="lazy" />
   }
   const bg = item.type === 'lost' ? 'from-rose-100 to-orange-50' : 'from-emerald-100 to-sky-50'
   return (
@@ -108,6 +116,8 @@ export function PageHeader({ title, subtitle, children }) {
 
 export function BackLink({ to, label = 'Back' }) {
   const navigate = useNavigate()
+  const auth = useAuth()
+  const fallback = auth?.user ? '/dashboard' : '/browse'
   const cls = 'mb-4 inline-flex items-center gap-1.5 text-sm font-semibold text-slate-500 hover:text-slate-900'
   const content = (
     <>
@@ -118,8 +128,8 @@ export function BackLink({ to, label = 'Back' }) {
   return (
     <button
       type="button"
-      // Go back if we came from inside the app, otherwise fall back to the dashboard.
-      onClick={() => (window.history.state?.idx > 0 ? navigate(-1) : navigate('/dashboard'))}
+      // Go back if we came from inside the app, otherwise fall back to dashboard or browse.
+      onClick={() => (window.history.state?.idx > 0 ? navigate(-1) : navigate(fallback))}
       className={cls}
     >
       {content}

@@ -22,14 +22,21 @@ export default function MyReports() {
 
   useEffect(() => {
     if (!user?.id) return
+    let active = true
     Promise.all([listMyItems(user.id), listClaimsForUser(user.id)])
       .then(([mine, claims]) => {
+        if (!active) return
         setItems((mine || []).sort((a, b) => new Date(b.created_at) - new Date(a.created_at)))
         const counts = {}
         for (const c of claims?.incoming || []) if (c.status === 'pending') counts[c.item_id] = (counts[c.item_id] || 0) + 1
         setClaimCounts(counts)
       })
-      .catch((err) => setError(err.message))
+      .catch((err) => {
+        if (active) setError(err.message)
+      })
+    return () => {
+      active = false
+    }
   }, [user?.id])
 
   const visible = items ? items.filter((i) => tab === 'all' || i.type === tab) : []
@@ -48,6 +55,7 @@ export default function MyReports() {
       <div className="mb-5 inline-flex rounded-xl bg-slate-200/70 p-1">
         {TABS.map(([value, label]) => (
           <button
+            type="button"
             key={value}
             onClick={() => setParams(value === 'all' ? {} : { tab: value }, { replace: true })}
             className={`rounded-lg px-4 py-1.5 text-sm font-semibold transition ${

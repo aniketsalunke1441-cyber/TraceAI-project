@@ -21,8 +21,8 @@ export default function Claims() {
     load()
   }, [load])
 
-  const list = claims ? claims[tab] : []
-  const pending = claims ? claims.incoming.filter((c) => c.status === 'pending').length : 0
+  const list = claims && Array.isArray(claims[tab]) ? claims[tab] : []
+  const pending = claims && Array.isArray(claims.incoming) ? claims.incoming.filter((c) => c.status === 'pending').length : 0
 
   return (
     <div className="container-page max-w-4xl py-8 sm:py-10">
@@ -34,6 +34,7 @@ export default function Claims() {
           ['outgoing', 'My claims'],
         ].map(([value, label]) => (
           <button
+            type="button"
             key={value}
             onClick={() => setTab(value)}
             className={`rounded-lg px-4 py-1.5 text-sm font-semibold transition ${

@@ -1,7 +1,7 @@
 import { useState } from 'react'
 import { Link, Navigate, useLocation, useNavigate } from 'react-router-dom'
 import { useAuth } from '../context/AuthContext'
-import { ErrorBox } from '../components/ui'
+import { ErrorBox, Spinner } from '../components/ui'
 import { Logo } from '../components/Navbar'
 import { DEMO_USERS, DEMO_PASSWORD } from '../lib/demoData'
 
@@ -26,18 +26,34 @@ function AuthShell({ title, subtitle, children, footer }) {
 const EMAIL_RE = /^[^\s@]+@[^\s@]+\.[^\s@]+$/
 
 export function Login() {
-  const { signIn, user, isDemo } = useAuth()
+  const { signIn, user, loading, isDemo } = useAuth()
   const navigate = useNavigate()
   const location = useLocation()
-  const redirectTo = location.state?.from || '/dashboard'
+
+  // Ensure redirectTo never loops back to login/signup or outside the app
+  const rawRedirect = location.state?.from
+  const redirectTo =
+    typeof rawRedirect === 'string' &&
+    rawRedirect.startsWith('/') &&
+    !rawRedirect.startsWith('//') &&
+    !rawRedirect.startsWith('/login') &&
+    !rawRedirect.startsWith('/signup')
+      ? rawRedirect
+      : '/dashboard'
+
   const [form, setForm] = useState({ email: '', password: '' })
   const [error, setError] = useState('')
   const [busy, setBusy] = useState(false)
+
+  if (loading) {
+    return <Spinner label="Checking session…" />
+  }
 
   if (user) return <Navigate to={redirectTo} replace />
 
   async function handleSubmit(e) {
     e.preventDefault()
+    if (busy) return
     if (!EMAIL_RE.test(form.email)) return setError('Please enter a valid email address.')
     if (!form.password) return setError('Please enter your password.')
     setBusy(true)
@@ -123,17 +139,22 @@ export function Login() {
 }
 
 export function Signup() {
-  const { signUp, user } = useAuth()
+  const { signUp, user, loading } = useAuth()
   const navigate = useNavigate()
   const [form, setForm] = useState({ name: '', email: '', password: '', confirm: '' })
   const [error, setError] = useState('')
   const [info, setInfo] = useState('')
   const [busy, setBusy] = useState(false)
 
+  if (loading) {
+    return <Spinner label="Checking session…" />
+  }
+
   if (user) return <Navigate to="/dashboard" replace />
 
   async function handleSubmit(e) {
     e.preventDefault()
+    if (busy) return
     if (form.name.trim().length < 2) return setError('Please enter your full name.')
     if (!EMAIL_RE.test(form.email)) return setError('Please enter a valid email address.')
     if (form.password.length < 6) return setError('Password must be at least 6 characters.')

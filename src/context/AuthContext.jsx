@@ -8,14 +8,38 @@ export function AuthProvider({ children }) {
   const [loading, setLoading] = useState(true)
 
   useEffect(() => {
-    // keep the same object while the same person is logged in (avoids needless reloads)
-    const update = (u) => setUser((prev) => (prev?.id === u?.id && prev?.name === u?.name ? prev : u))
+    let mounted = true
+
+    const update = (u) => {
+      if (!mounted) return
+      setUser((prev) => {
+        if (!prev && !u) return null
+        if (prev?.id === u?.id && prev?.name === u?.name && prev?.email === u?.email) {
+          return prev
+        }
+        return u
+      })
+      setLoading(false)
+    }
+
     api
       .getCurrentUser()
-      .then(update)
-      .catch(() => update(null))
-      .finally(() => setLoading(false))
-    return api.onAuthChange(update)
+      .then((u) => {
+        if (mounted) update(u)
+      })
+      .catch((err) => {
+        console.warn('Initial session check notice:', err?.message)
+        if (mounted) update(null)
+      })
+
+    const unsubscribe = api.onAuthChange((u) => {
+      if (mounted) update(u)
+    })
+
+    return () => {
+      mounted = false
+      if (typeof unsubscribe === 'function') unsubscribe()
+    }
   }, [])
 
   const signIn = useCallback(async (credentials) => {

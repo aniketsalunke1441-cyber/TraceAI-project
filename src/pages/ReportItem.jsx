@@ -86,6 +86,7 @@ export default function ReportItem({ type, existing = null }) {
 
   async function handleSubmit(e) {
     e.preventDefault()
+    if (saving || imageBusy) return
     if (!validate()) return
     setSaving(true)
     setServerError('')

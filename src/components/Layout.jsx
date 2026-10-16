@@ -5,6 +5,7 @@ import { useAuth } from '../context/AuthContext'
 import { checkConnection, checkMatchingService, resetDemoData } from '../lib/api'
 import Icon from './Icon'
 import { Spinner } from './ui'
+import ErrorBoundary from './ErrorBoundary'
 
 export function DemoBanner() {
   const { isDemo } = useAuth()
@@ -126,7 +127,9 @@ export default function Layout() {
       <ConnectionErrorBanner status={status} />
       <Navbar />
       <main className="flex-1">
-        <Outlet />
+        <ErrorBoundary>
+          <Outlet />
+        </ErrorBoundary>
       </main>
       <Footer status={status} service={service} />
     </div>
@@ -137,7 +140,10 @@ export default function Layout() {
 export function ProtectedRoute({ children }) {
   const { user, loading } = useAuth()
   const location = useLocation()
-  if (loading) return <Spinner />
-  if (!user) return <Navigate to="/login" replace state={{ from: location.pathname + location.search }} />
+  if (loading) return <Spinner label="Checking access…" />
+  const currentPath = location.pathname || ''
+  const isAuthRoute = currentPath === '/login' || currentPath === '/signup'
+  const fromPath = isAuthRoute ? '/dashboard' : currentPath + (location.search || '')
+  if (!user) return <Navigate to="/login" replace state={{ from: fromPath }} />
   return children
 }

@@ -31,9 +31,17 @@ export default function Browse() {
   }
 
   useEffect(() => {
+    let active = true
     listItems()
-      .then(setItems)
-      .catch((err) => setError(err.message))
+      .then((data) => {
+        if (active) setItems(Array.isArray(data) ? data : [])
+      })
+      .catch((err) => {
+        if (active) setError(err.message)
+      })
+    return () => {
+      active = false
+    }
   }, [])
 
   // eslint-disable-next-line react-hooks/exhaustive-deps
@@ -64,6 +72,7 @@ export default function Browse() {
               ['found', 'Found'],
             ].map(([value, label]) => (
               <button
+                type="button"
                 key={value}
                 role="tab"
                 aria-selected={filters.type === value}
@@ -111,7 +120,7 @@ export default function Browse() {
               title="Nothing matches your search"
               text="Try different words or clear some filters."
               action={
-                <button className="btn-secondary" onClick={() => setParams({}, { replace: true })}>
+                <button type="button" className="btn-secondary" onClick={() => setParams({}, { replace: true })}>
                   Clear filters
                 </button>
               }
