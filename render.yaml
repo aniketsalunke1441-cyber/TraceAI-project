@@ -5,6 +5,7 @@ services:
     runtime: python
     rootDir: backend
     plan: free
+    autoDeploy: true
     healthCheckPath: /api/health
     buildCommand: pip install -r requirements.txt
     startCommand: uvicorn app.main:app --host 0.0.0.0 --port $PORT
@@ -22,6 +23,7 @@ services:
   - type: web
     name: findback-frontend
     runtime: static
+    autoDeploy: true
     buildCommand: npm install && npm run build
     staticPublishPath: dist
     routes:
