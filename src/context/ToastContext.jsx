@@ -19,15 +19,14 @@ export function ToastProvider({ children }) {
     [dismiss],
   )
 
-  const api = useMemo(
-    () => ({
-      success: (m) => show('success', m),
-      error: (m) => show('error', m),
-      info: (m) => show('info', m),
-      pushToast: (m, type = 'info') => show(type, m),
-    }),
-    [show],
-  )
+  const api = useMemo(() => {
+    const fn = (message, type = 'info') => show(type, message)
+    fn.success = (m) => show('success', m)
+    fn.error = (m) => show('error', m)
+    fn.info = (m) => show('info', m)
+    fn.pushToast = (m, type = 'info') => show(type, m)
+    return fn
+  }, [show])
 
   const styles = {
     success: 'bg-emerald-600 text-white',
@@ -47,7 +46,7 @@ export function ToastProvider({ children }) {
           >
             <Icon name={t.type === 'error' ? 'alert' : 'check'} className="mt-0.5 h-4 w-4 shrink-0" />
             <span className="flex-1">{t.message}</span>
-            <button onClick={() => dismiss(t.id)} aria-label="Dismiss" className="opacity-70 hover:opacity-100">
+            <button type="button" onClick={() => dismiss(t.id)} aria-label="Dismiss" className="opacity-70 hover:opacity-100">
               <Icon name="x" className="h-4 w-4" />
             </button>
           </div>

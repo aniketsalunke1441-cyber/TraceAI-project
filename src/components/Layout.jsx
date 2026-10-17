@@ -24,7 +24,7 @@ export function DemoBanner() {
         <span>
           <strong>DEMO MODE</strong> — sample data stored in this browser only. Add Firebase credentials in <code>.env</code> to go live.
         </span>
-        <button onClick={handleReset} className="font-bold underline underline-offset-2 hover:text-amber-700">
+        <button type="button" onClick={handleReset} className="font-bold underline underline-offset-2 hover:text-amber-700">
           Reset demo data
         </button>
       </div>

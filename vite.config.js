@@ -6,14 +6,25 @@ import tailwindcss from '@tailwindcss/vite'
 export default defineConfig({
   plugins: [react(), tailwindcss()],
   build: {
+    sourcemap: true,
     chunkSizeWarningLimit: 1000,
     rollupOptions: {
       output: {
-        manualChunks: {
-          'firebase-firestore': ['firebase/firestore'],
-          'firebase-core': ['firebase/app', 'firebase/auth', 'firebase/storage'],
-          supabase: ['@supabase/supabase-js'],
-          vendor: ['react', 'react-dom', 'react-router-dom'],
+        manualChunks(id) {
+          if (id.includes('node_modules')) {
+            if (id.includes('firebase/firestore')) {
+              return 'firebase-firestore'
+            }
+            if (id.includes('firebase')) {
+              return 'firebase-core'
+            }
+            if (id.includes('@supabase')) {
+              return 'supabase'
+            }
+            if (id.includes('react') || id.includes('scheduler')) {
+              return 'vendor'
+            }
+          }
         },
       },
     },

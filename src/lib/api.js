@@ -248,7 +248,7 @@ export function onAuthChange(callback) {
   }
   if (!supabase) return () => {}
   try {
-    const { data } = supabase.auth.onAuthStateChange((_event, session) => callback(mapSupabaseUser(session?.user)))
+    const { data } = supabase.auth.onAuthStateChange((_event, session) => callback(mapSupabaseUser(session?.user), _event))
     return () => data?.subscription?.unsubscribe?.()
   } catch (err) {
     console.warn('Supabase onAuthStateChange error:', err?.message)

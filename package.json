@@ -8,7 +8,7 @@
     "dev": "vite",
     "build": "vite build",
     "preview": "vite preview",
-    "test": "node --test tests/matching.test.js tests/utils.test.js tests/security.test.js tests/parity.test.js tests/setup.test.js",
+    "test": "node --test tests/matching.test.js tests/utils.test.js tests/security.test.js tests/parity.test.js tests/setup.test.js tests/regression.test.js",
     "check:db": "node scripts/check-supabase.mjs",
     "check:firebase": "node scripts/check-firebase.mjs",
     "gen:parity": "node scripts/generate-parity-fixtures.mjs",

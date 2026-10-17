@@ -39,7 +39,8 @@ const EMPTY = { title: '', category: '', description: '', color: '', brand: '', 
 const FORM_FIELDS = Object.keys(EMPTY)
 
 export default function ReportItem({ type, existing = null }) {
-  const copy = COPY[type]
+  const safeType = (type || existing?.type || 'lost').toLowerCase()
+  const copy = COPY[safeType] || COPY.lost
   const isEdit = Boolean(existing)
   const { user } = useAuth()
   const navigate = useNavigate()
@@ -245,7 +246,11 @@ export default function ReportItem({ type, existing = null }) {
             <ErrorBox message={serverError} />
 
             <div className="flex flex-col-reverse gap-3 pt-2 sm:flex-row sm:justify-end">
-              <button type="button" className="btn-secondary" onClick={() => navigate(-1)}>
+              <button
+                type="button"
+                className="btn-secondary"
+                onClick={() => (window.history.state?.idx > 0 ? navigate(-1) : navigate('/dashboard'))}
+              >
                 Cancel
               </button>
               <button type="submit" className={copy.btnClass} disabled={saving || imageBusy}>
@@ -274,7 +279,7 @@ export function EditReport() {
 
   if (error) return <div className="container-page py-10"><ErrorBox message={error} /></div>
   if (item === undefined) return <Spinner />
-  if (!item || item.user_id !== user.id)
+  if (!item || !user || item.user_id !== user.id)
     return (
       <div className="container-page py-10">
         <EmptyState

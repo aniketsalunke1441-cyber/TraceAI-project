@@ -9,8 +9,9 @@ export function AuthProvider({ children }) {
 
   useEffect(() => {
     let mounted = true
+    let initialCheckDone = false
 
-    const update = (u) => {
+    const update = (u, forceLoadingDone = false) => {
       if (!mounted) return
       setUser((prev) => {
         if (!prev && !u) return null
@@ -19,22 +20,35 @@ export function AuthProvider({ children }) {
         }
         return u
       })
-      setLoading(false)
+      if (forceLoadingDone || initialCheckDone) {
+        setLoading(false)
+      }
     }
 
+    // Subscribe to auth changes (token refresh, sign-in, sign-out)
+    const unsubscribe = api.onAuthChange((u, event) => {
+      if (!mounted) return
+      if (event === 'INITIAL_SESSION') {
+        initialCheckDone = true
+      }
+      update(u, event === 'INITIAL_SESSION' || event === 'SIGNED_IN' || event === 'SIGNED_OUT')
+    })
+
+    // Also verify session explicitly across all backends
     api
       .getCurrentUser()
       .then((u) => {
-        if (mounted) update(u)
+        if (!mounted) return
+        initialCheckDone = true
+        update(u, true)
       })
       .catch((err) => {
         console.warn('Initial session check notice:', err?.message)
-        if (mounted) update(null)
+        if (mounted) {
+          initialCheckDone = true
+          setLoading(false)
+        }
       })
-
-    const unsubscribe = api.onAuthChange((u) => {
-      if (mounted) update(u)
-    })
 
     return () => {
       mounted = false

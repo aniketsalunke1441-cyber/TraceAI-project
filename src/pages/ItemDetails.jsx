@@ -26,7 +26,7 @@ function Detail({ icon, label, value }) {
 
 function ClaimForm({ item, user, onDone }) {
   const [message, setMessage] = useState('')
-  const [contact, setContact] = useState(user.email)
+  const [contact, setContact] = useState(user?.email || '')
   const [busy, setBusy] = useState(false)
   const [error, setError] = useState('')
   const toast = useToast()
